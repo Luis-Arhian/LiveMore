@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap');
+
+/* Colores */
+$verde: #4AFF0B;
+$gris: #433520;
+$azul: #025955;
+$azulClaro: #00917C;
+$crema: #FDE8CD;
+
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+  }
+
+body{
+    font-size: 62.5%;
+
+    .principal{
+        background-image: url('../assets/img/landing-page.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0.85;
+
+        .navegacion{
+            width: 100vw;
+            height: 10vh;
+
+            .contenedor-navegacion{
+                width: 70%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1.2rem;
+
+                .logo{
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    width: 50%;
+                    height: 80%;
+                }
+
+                .enlaces{
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        margin: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .eslogan{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            position: relative;
+            top: 10% ;
+            left: 15rem;
+
+            span{
+                font-family: 'Catamaran', sans-serif;
+                font-size: 4rem;
+                color: $azul;
+                z-index: 2;
+
+                &.light{
+                    font-weight: 300;
+                }
+                &.regular{
+                    font-weight: 400;
+                }
+                &.medium{
+                    font-weight: 500;
+                }
+            }
+
+            svg{
+                position: relative;
+                bottom: 1.8rem;
+                left: 1.5rem;
+                fill: $gris;
+                width: 15rem;
+                overflow: visible;
+                z-index: 1;
+
+            }
+        }
+
+        .registrate{
+            position: absolute;
+            left: 15rem;
+            top: 32rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            p{
+                font-size: 1rem;
+            }
+
+            button{
+                font-size: 1rem;
+                color: $azul;
+                background-color: $crema;
+                border-radius: 0.8rem;
+                border: none;
+                padding: 1rem;
+                margin: 1rem;
+            }
+        }
+    }
+}
