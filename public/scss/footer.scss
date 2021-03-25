@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap');
+
+/* Colores */
+$verde: #4AFF0B;
+$gris: #433520;
+$azul: #025955;
+$azulClaro: #00917C;
+$crema: #FDE8CD;
+
+
+footer{
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    bottom: 0;
+    background-color: $azulClaro;
+    color: $crema;
+
+    .contenido{
+        display: grid;
+        //grid-template-columns: repeat(1fr);
+        grid-template-areas: 'logo copyright redes';
+        height: 100%;
+        align-items: center;
+        font-size: 1rem;
+
+        .logo{
+            grid-area: logo;
+            width: 50%;
+            justify-self: center;
+        }
+
+        .copyright{
+            grid-area: copyright;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .redes{
+            grid-area: redes;
+            justify-self: center;
+
+            p{
+                justify-self: center;
+                align-items: center;
+            }
+
+            .logos{
+                display: flex;
+                align-content: center;
+                justify-content: space-evenly;
+            }
+            svg{
+                color: white;
+                width: 1.8rem;
+                margin: .5rem;
+            }
+        }
+    }
+}

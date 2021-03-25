@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap');
+
+/* Colores */
+$verde: #3dd40b;
+$gris: #433520;
+$azul: #025955;
+$azulClaro: #01a088;
+$crema: #FDE8CD;
+
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+  }
+
+body{
+    font-size: 62.5%;
+    .navegador{
+        width: 100vw;
+        height: 10vh;
+        background-color: $azulClaro;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .contenedor-navegador{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%;
+            height: 100%;
+            //background-color: purple;
+
+            .logo{
+                width: 8%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .enlaces{
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                a{
+                    font-size: 1.5rem;
+                    color: $crema;
+                    text-decoration: none;
+
+                    &:hover{
+                        color: $gris;
+                        font-weight: 500;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
