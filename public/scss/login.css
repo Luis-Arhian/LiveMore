@@ -1,0 +1,158 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container .imageContainer {
+  width: 45%;
+  height: 100%;
+  float: right;
+}
+
+.container .imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .loginContainer {
+  width: 55%;
+  height: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .loginContainer svg {
+  height: 20%;
+}
+
+.container .loginContainer .card {
+  height: 40rem;
+  width: 25rem;
+  background-color: #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .loginContainer .card .header {
+  font-size: 1.2rem;
+}
+
+.container .loginContainer .card form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .loginContainer .card form input {
+  background-color: lightgray;
+  border-radius: 5px;
+  border: none;
+  width: 20rem;
+  height: 2.5rem;
+  font-size: 0.8rem;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.container .loginContainer .card form .recordar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .loginContainer .card form .recordar .imagen {
+  background-image: url();
+}
+
+.container .loginContainer .card form .recordar input[type="checkbox"] {
+  background-color: lightgray;
+  margin: 1rem -7.5rem;
+}
+
+.container .loginContainer .card form .recordar label {
+  font-size: 1rem;
+}
+
+.container .loginContainer .card form button {
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  border-radius: 5px;
+  margin: 2rem;
+}
+
+.container .loginContainer .card form a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: grey;
+}
+
+.container .loginContainer .card .registrate {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: grey;
+}
+
+.container .loginContainer .card .registrate span {
+  cursor: pointer;
+  font-weight: bold;
+}
+/*# sourceMappingURL=login.css.map */
