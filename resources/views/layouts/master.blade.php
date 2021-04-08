@@ -11,11 +11,15 @@
 </head>
 
 <body>
-    @include('nav')
+    @section('nav')
+        Barra de navegación
+    @show
 
     @yield('contenido')
 
-    @include('footer')
+    @section('footer')
+        Pie de página
+    @show
 
 </body>
 </html>

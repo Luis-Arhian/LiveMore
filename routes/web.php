@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// LANDING PAGE
 Route::get('/', function () {
     return view('landing');
 });
@@ -20,3 +22,21 @@ Route::get('/', function () {
 Route::get('master', function(){
     return view('layouts/master');
 });
+
+
+// RUTAS BLOG
+Route::prefix('blog')->group(function () {
+    Route::resource('post', PostsController::class);
+
+    Route::get('blog', function ($id) {
+        return view('index')
+        ->with('id', $id);
+    });
+
+    Route::get('blog/categorias', function ($id) {
+        return view('categorias');
+    });
+});
+
+
+// LOGIN
