@@ -24,6 +24,7 @@ class CreatePostsTable extends Migration
             $table->bigInteger('user_id')->unsigned(); // Referencia al modelo del usuario al que pertenece.
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps(); // Fecha de creación del post.
+            $table->string('slug')->unique(); //Slug del post que utilizaremos para crear sus rutas.
             $table->engine='InnoDB';
         });
     }
