@@ -14,16 +14,16 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('brief');
-            $table->text('content');
-            $table->boolean('status');
-            $table->bigInteger('category_id')->unsigned();
+            $table->bigIncrements('id'); // ID del post.
+            $table->string('title'); // Titulo del post.
+            $table->string('brief'); // Breve descripcion del post.
+            $table->text('content'); // Contenido completo del post.
+            $table->boolean('status'); // Indica si el post está publicado o sin publicar.
+            $table->bigInteger('category_id')->unsigned(); // Referencia al modelo de categoria/s a las que pertenece.
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned(); // Referencia al modelo del usuario al que pertenece.
             $table->foreign('user_id')->references('id')->on('users');
-            $table->timestamps();
+            $table->timestamps(); // Fecha de creación del post.
             $table->engine='InnoDB';
         });
     }

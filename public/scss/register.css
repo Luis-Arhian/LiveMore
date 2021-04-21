@@ -1,0 +1,141 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #F6F6F6;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'imagen contenido';
+}
+
+.container .image {
+  width: 90%;
+  height: 100vh;
+  float: left;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: imagen;
+}
+
+.container .image img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+}
+
+.container .content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contenido;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .content svg {
+  width: 20%;
+  height: 20%;
+}
+
+.container .content .card {
+  width: 85%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+}
+
+.container .content .card .title {
+  font-size: 1.5rem;
+  margin-top: -2rem;
+}
+
+.container .content .card form {
+  width: 70%;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .content .card form input {
+  width: 80%;
+  height: 80%;
+  margin: 1rem;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  outline: 0;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.container .content .card form button[type="submit"] {
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #383838;
+  color: #fff;
+  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+}
+
+.container .content .card .iniciaSesion span {
+  color: blue;
+}
+/*# sourceMappingURL=register.css.map */

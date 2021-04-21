@@ -22,4 +22,8 @@ class Post extends Model
     public function user(){
         return $this->hasMany('User');
     }
+
+    public function images(){
+        return $this->morphMany(Image::class, 'model');
+    }
 }

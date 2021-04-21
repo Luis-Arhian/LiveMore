@@ -22,8 +22,7 @@ class UsersSeeder extends Seeder
                 'email' => 'User'.$i.'@mail.com',
                 'username' => 'User'.$i,
                 'password' => '1234',
-                'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.es%2Ficonos-gratis%2Fsimbolo-usuario-negro-macho_724420.htm&psig=AOvVaw2V8DfIuAykgLhaYxRa-VPy&ust=1617796020460000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjqwvvF6e8CFQAAAAAdAAAAABAQ',
-                'admin' => '1'
+                'admin' => '0'
             ));
         }
     }

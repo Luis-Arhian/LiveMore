@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" href="{{asset('scss/login.css')}}">
 </head>
@@ -39,7 +38,7 @@
                         </g>
                     </g>
                 </svg>
-                
+
                 <div class="card">
                     <span class="header">{{ __('Bienvenido a tu nuevo cambio') }}</span>
 
@@ -63,7 +62,7 @@
                             </span>
                             @enderror
 
-                            <label class="recordar"> 
+                            <label class="recordar">
                                 <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <span class="imagen imagen-checked"> </span>
                                 <span class="texto"> Recordar contraseña </span>
@@ -79,12 +78,12 @@
                         </form>
                     </div>
 
-                    <div class="registrate"> ¿Todavia no has comenzado? 
+                    <div class="registrate"> ¿Todavia no has comenzado?
                         <span>
                             Registrate
                         </span>
                     </div>
-                </div> 
+                </div>
             </div>
         </main>
 </body>

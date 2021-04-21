@@ -15,8 +15,8 @@
             	       <img src={{asset('assets/logos/logo.svg')}} alt="logo LiveMore">
             	</div>
             	<div class="enlaces">
-            	    <a href="{{action([PostsController::class, 'index'])}}"> Blog</a>
-            	    <a href="{{action([TiendaController::class, 'index'])}}"> Tienda </a>
+            	    <a href="#""> Blog</a>
+            	    <a href="#"> Tienda </a>
             	    <a href=""> Conectate </a>
             	</div>
             </div>

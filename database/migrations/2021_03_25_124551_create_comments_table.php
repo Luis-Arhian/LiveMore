@@ -14,13 +14,13 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('content');
-            $table->bigInteger('post_id')->unsigned();
+            $table->bigIncrements('id'); // ID del comentario.
+            $table->string('content'); // Contenido del comentario.
+            $table->bigInteger('post_id')->unsigned(); // ID del modelo del post al que pertenece.
             $table->foreign('post_id')->references('id')->on('posts');
-            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned(); // ID del modelo del usuario que ha creado el comentario.
             $table->foreign('user_id')->references('id')->on('users');
-            $table->timestamps();
+            $table->timestamps(); // Fecha de creación del comentario.
             $table->engine = 'InnoDB';
         });
     }
