@@ -1,23 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap");
 /* Colores */
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  margin: 0;
-}
-
-.footer {
+footer {
   width: 100vw;
-  height: 30vh;
+  height: 15vh;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   background-color: #00917C;
+  color: #FDE8CD;
+}
+
+footer .contenido {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'logo copyright redes';
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+footer .contenido .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  width: 50%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+footer .contenido .copyright {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: copyright;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+footer .contenido .redes {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: redes;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+footer .contenido .redes p {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .contenido .redes .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .contenido .redes svg {
+  color: white;
+  width: 1.8rem;
+  margin: .5rem;
 }
 /*# sourceMappingURL=footer.css.map */

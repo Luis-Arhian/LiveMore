@@ -20,7 +20,7 @@ body {
 body .navegador {
   width: 100vw;
   height: 10vh;
-  background-color: #00917C;
+  background-color: #01a088;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,7 +64,7 @@ body .navegador .contenedor-navegador .logo {
 }
 
 body .navegador .contenedor-navegador .enlaces {
-  width: 40%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,8 +72,9 @@ body .navegador .contenedor-navegador .enlaces {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -81,7 +82,12 @@ body .navegador .contenedor-navegador .enlaces {
 
 body .navegador .contenedor-navegador .enlaces a {
   font-size: 1.5rem;
-  color: black;
+  color: #FDE8CD;
   text-decoration: none;
+}
+
+body .navegador .contenedor-navegador .enlaces a:hover {
+  color: #433520;
+  font-weight: 500;
 }
 /*# sourceMappingURL=nav.css.map */

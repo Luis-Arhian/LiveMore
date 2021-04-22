@@ -29,12 +29,9 @@ Route::get('master', function(){
 Route::prefix('blog')->group(function () {
     Route::resource('post', PostsController::class);
 
-    Route::get('blog', function ($id) {
-        return view('index')
-        ->with('id', $id);
-    });
+    Route::get('principal', [PostsController::class, 'index']);
 
-    Route::get('blog/categorias', function ($id) {
+    Route::get('categorias', function ($id) {
         return view('categorias');
     });
 });

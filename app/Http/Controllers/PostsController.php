@@ -14,23 +14,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        // PRUEBAS DE ORM. 
-        $posts = Post::all();
+        // Obtener los post con status 1, es decir, los que se encuentran publicados.
+        $posts_publicados = Post::where('status', 1)->get();
 
-        foreach($posts as $post){
-            echo $post->title.'<br/>';
-            echo $post->brief.'<br/>';
-            //echo $post->content.'<br/>';
-            echo $post->categories->name. '<br>';
-
-            echo '<h2> Comentarios </h2>';
-            foreach($post->comments as $comment){
-                echo $comment->user->name .' '. $comment->user->surname .'<br>';
-                echo 'Comento el: '. $comment->created_at .'<br>';
-                echo $comment->content. '<br>';
-                echo '<hr>';
-            }
-        }
+        // Devolvemos la vista pero pasando los resultados obtenidos anteriormente.
+        return view('blog', compact('posts_publicados'));
     }
 
     /**
