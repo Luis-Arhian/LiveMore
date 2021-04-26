@@ -20,10 +20,14 @@ class Post extends Model
     }
 
     public function user(){
-        return $this->hasMany('User');
+        return $this->belongsTo(User::class);
     }
 
     public function images(){
         return $this->morphMany(Image::class, 'model');
+    }
+
+    public function mainImage(){
+        return $this::first();
     }
 }

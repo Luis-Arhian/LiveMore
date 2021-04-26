@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Image;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -15,10 +17,15 @@ class PostsController extends Controller
     public function index()
     {
         // Obtener los post con status 1, es decir, los que se encuentran publicados.
-        $posts_publicados = Post::where('status', 1)->get();
+        $posts_publicados = Post::SELECT('*')
+                            ->WHERE('status', 1)
+                            ->orderBy('id', 'desc')
+                            ->get();
+        //('status', 1)->orderBy('DESC')->get();
+        $categorias = Category::all();
 
         // Devolvemos la vista pero pasando los resultados obtenidos anteriormente.
-        return view('blog', compact('posts_publicados'));
+        return view('blog', compact('posts_publicados', 'categorias'));
     }
 
     /**
@@ -48,9 +55,9 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        //
+        return view('posts.show', compact($post));
     }
 
     /**

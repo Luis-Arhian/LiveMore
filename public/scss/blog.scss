@@ -1,0 +1,208 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Colores */
+$verde: #4AFF0B;
+$gris: #433520;
+$azul: #025955;
+$azulClaro: #00917C;
+$crema: #FDE8CD;
+$black: #363636;
+$light_grey: #d3d3d3;
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+}
+
+.posts{
+    width: 98vw;
+    height: 100vh;
+
+    .post_principal{
+        width:100%;
+        height:100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .tituloPost{
+            width: 50rem;
+            height: 10rem;
+            background-color: $light_grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            margin-top: auto;
+            position: relative;
+            top: 10rem;
+
+            .categoria{
+                position: relative;
+                top: -1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 1rem 0;
+
+                span{
+                    width: 100%;
+                    height: 11%;
+                    background-color: $verde;
+                    margin: 0 1rem;
+                    overflow: hidden;
+                }
+
+                p{
+                    justify-self: center;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+
+            h1{
+                position: relative;
+                top: -1.5rem
+            }
+        }
+
+        .nav{
+            width: 100%;
+            height: 10%;
+            margin-top: auto;
+            background-color: $verde;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: sticky;
+            top: 0;
+
+            .logo{
+                width: 20%;
+                height: 70%;
+            }
+
+            .enlaces{
+                width: 40%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                a{
+                    color: #fff;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .postSecundario{
+        width: 60%;
+        height: 40%;
+        margin: 2.5rem auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .contenido{
+            background-color: $gris;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.5rem;
+            color: $crema;
+
+            h1{
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            h2{
+                font-size: 0.8rem;
+                font-weight: 400;
+            }
+
+            h3{
+                font-size: 0.7rem;
+                font-weight: 200;
+                margin-top: 1.5rem;
+            }
+        }
+
+        .imagen{
+            background-size: cover;
+            width: 50%;
+            height: 100%;
+
+        }
+    }
+
+    .categoria{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            width: 15%;
+            text-transform: uppercase;
+        }
+
+        span{
+            width: 60%;
+            height: 10%;
+            background-color: $verde;
+            content: "";
+        }
+
+    }
+
+    .posts_categoria{
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+
+        .post{
+            width: 15rem;
+            height: 20rem;
+            align-self: center;
+            justify-self: center;
+
+            img{
+                width: 15rem;
+                height: 15rem;
+            }
+
+            .title{
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+        }
+    }
+}
+
+

@@ -27,7 +27,8 @@ Route::get('master', function(){
 
 // RUTAS BLOG
 Route::prefix('blog')->group(function () {
-    Route::resource('post', PostsController::class);
+    //Route::resource('posts{post}', [PostsController::class, 'show'])->name('mostrar');
+    Route::get('posts{post}', [PostsController::class, 'show'])->name('mostrarPost');
 
     Route::get('principal', [PostsController::class, 'index']);
 
