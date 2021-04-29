@@ -169,10 +169,11 @@ $light_grey: #d3d3d3;
         }
 
         span{
+            content: " ";
             width: 60%;
-            height: 10%;
+            height: 0.8rem;
+            margin-left: 1rem;
             background-color: $verde;
-            content: "";
         }
 
     }

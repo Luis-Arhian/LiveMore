@@ -21,20 +21,19 @@ Route::get('/', function () {
 });
 
 Route::get('master', function(){
-    return view('layouts/master');
+    return view('layouts.maestro');
 });
 
 
 // RUTAS BLOG
 Route::prefix('blog')->group(function () {
     //Route::resource('posts{post}', [PostsController::class, 'show'])->name('mostrar');
+    Route::get('principal', [PostsController::class, 'index']);
     Route::get('posts{post}', [PostsController::class, 'show'])->name('mostrarPost');
 
-    Route::get('principal', [PostsController::class, 'index']);
 
-    Route::get('categorias', function ($id) {
-        return view('categorias');
-    });
+    Route::get('categorias', [PostsController::class, 'everyCategory'])->name('todasLasCategorias');
+    Route::get('categorias{categoria}', [PostsController::class, 'category'])->name('filtrarCategoria');
 });
 
 

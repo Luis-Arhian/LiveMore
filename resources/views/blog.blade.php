@@ -72,16 +72,15 @@
         @foreach ($categorias as $categoria)
                 <div class="categoria">
                     <h1> {{$categoria->name}}</h1>
-                    <span>  z </span>
-
+                    <span> </span>
                 </div>
 
                 <div class="posts_categoria">
-                    @foreach ($categoria->posts as $post)
+                    @foreach ($categoria->posts as $postCategoria)
                         <div class="post">
-                            <img src="http://localhost/livemore/storage/{{$post->images[0]->url}}" alt="">
+                            <img src="http://localhost/livemore/storage/{{$postCategoria->images[0]->url}}" alt="">
                             <div class="title">
-                                <a href="{{route('mostrarPost', $post)}}"> {{$post->title}} </a>
+                                <a href="{{route('mostrarPost', $postCategoria)}}"> {{$post->title}} </a>
                             </div>
                         </div>
                     @endforeach

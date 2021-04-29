@@ -4,8 +4,8 @@
 footer {
   width: 100%;
   height: 15%;
-  position: relative;
-  bottom: 0;
+  margin: auto;
+  margin-top: 2rem;
   background-color: #00917C;
   color: #FDE8CD;
 }
@@ -13,6 +13,8 @@ footer {
 footer .contenido {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: ()[1fr];
+      grid-template-columns: repeat(1fr);
       grid-template-areas: 'logo copyright redes';
   height: 100%;
   -webkit-box-align: center;

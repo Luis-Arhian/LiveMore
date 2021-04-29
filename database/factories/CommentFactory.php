@@ -24,9 +24,8 @@ class CommentFactory extends Factory
     public function definition()
     {
         return [
-            'contenido' => $this->faker->text(140),
-            'user_id' => User::all()->random('id'),
-            'post_id' => Post::all()->random('id')
+            'content' => $this->faker->text(140),
+            'user_id' => User::all()->random()->id,
         ];
     }
 }

@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap");
+/* Colores */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+}
+
+.articulo {
+  width: 100%;
+}
+
+.articulo .title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  left: 15%;
+  width: 50%;
+  height: 17rem;
+}
+
+.articulo .title h1 {
+  font-size: 2.5rem;
+}
+
+.articulo .title .autor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.articulo .title .autor h2 {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.articulo .title span {
+  width: 15%;
+  height: 0.3rem;
+  background-color: #3dd40b;
+  border-radius: 5px;
+  content: "";
+  margin-top: 0.5rem;
+}
+
+.articulo .brief {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: flex-center;
+      -ms-flex-align: flex-center;
+          align-items: flex-center;
+  justify-self: center;
+  width: 100%;
+}
+
+.articulo .brief p {
+  width: 60%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.articulo .imagen {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.articulo .imagen img {
+  width: 70%;
+  height: 12rem;
+  margin: 1.5rem 0;
+}
+
+.articulo .imagen span {
+  content: "";
+  width: 80%;
+  height: 0.2rem;
+  background-color: #3dd40b;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+}
+
+.articulo .contenido {
+  width: 70%;
+  margin: auto;
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.articulo .post_relacionados {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.articulo .post_relacionados h1 {
+  font-size: 1.5rem;
+}
+
+.articulo .post_relacionados span {
+  width: 50%;
+  height: 0.2rem;
+  background-color: #3dd40b;
+  content: "";
+}
+
+.articulo .post_relacionados .posts {
+  width: 80%;
+  height: 15rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: 3rem;
+}
+
+.articulo .post_relacionados .posts a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.articulo .post_relacionados .posts a img {
+  width: 70%;
+  height: 70%;
+}
+
+.articulo .post_relacionados .posts a h2 {
+  width: 50%;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.articulo .comentarios {
+  margin-top: 3rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+.articulo .comentarios h2 {
+  margin-bottom: .5rem;
+}
+
+.articulo .comentarios span {
+  width: 50%;
+  height: 0.2rem;
+  background-color: #3dd40b;
+  content: "";
+}
+/*# sourceMappingURL=articulos.css.map */

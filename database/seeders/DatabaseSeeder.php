@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Comment;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -20,7 +21,6 @@ class DatabaseSeeder extends Seeder
 
         // Creamos los datos de prueba mediante Factory.
         \App\Models\User::factory(5)->create();
-        \App\Models\Category::factory(5)->create();
-        $this->call(PostSeeder::class);
+        $this->call(CategorySeeder::class);
     }
 }

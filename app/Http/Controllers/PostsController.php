@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Image;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -14,15 +15,16 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
+        // Seleccionar todas las categorias disponibles.
+        $categorias = Category::all();
+
         // Obtener los post con status 1, es decir, los que se encuentran publicados.
         $posts_publicados = Post::SELECT('*')
-                            ->WHERE('status', 1)
+                            ->where('status', 1)
+                            //->where('category_id', $categorias->id)
                             ->orderBy('id', 'desc')
                             ->get();
-        //('status', 1)->orderBy('DESC')->get();
-        $categorias = Category::all();
 
         // Devolvemos la vista pero pasando los resultados obtenidos anteriormente.
         return view('blog', compact('posts_publicados', 'categorias'));
@@ -57,7 +59,15 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.show', compact($post));
+        $post_similares = Post::where('category_id', $post->category_id)
+                        ->where('status', 1)
+                        ->where('id', '!=', $post->id)
+                        ->latest('id')
+                        ->take(3)
+                        ->get();
+
+        $comments = Comment::where('post_id', $post->id)->get();
+        return view('Blog.show', compact ('post', 'post_similares', 'comments'));
     }
 
     /**
@@ -92,5 +102,15 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function category(Category $category){
+
+    }
+
+    public function everyCategory(Category $category){
+
+        $categorias = Category::all();
+        return view('blog.categorias', compact('categorias'));
     }
 }

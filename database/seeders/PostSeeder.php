@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Comment;
 use App\Models\Image;
 use App\Models\Post;
 use Illuminate\Database\Seeder;
@@ -25,6 +26,12 @@ class PostSeeder extends Seeder
                 'model_id' => $post->id,
                 'model_type' => Post::class
             ]);
+
+            // Creamos 5 comentarios de prueba por cada post.
+            Comment::factory(5)->create([
+                'post_id' => $post->id
+            ]);
+
         }
     }
 }

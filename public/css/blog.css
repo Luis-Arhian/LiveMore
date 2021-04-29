@@ -228,10 +228,11 @@ html {
 }
 
 .posts .categoria span {
+  content: " ";
   width: 60%;
-  height: 10%;
+  height: 0.8rem;
+  margin-left: 1rem;
   background-color: #4AFF0B;
-  content: "";
 }
 
 .posts .posts_categoria {

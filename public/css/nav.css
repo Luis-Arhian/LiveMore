@@ -20,7 +20,7 @@ body {
 body .navegador {
   width: 100vw;
   height: 10vh;
-  background-color: #01a088;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +51,7 @@ body .navegador .contenedor-navegador {
 }
 
 body .navegador .contenedor-navegador .logo {
-  width: 8%;
+  width: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,8 +81,8 @@ body .navegador .contenedor-navegador .enlaces {
 }
 
 body .navegador .contenedor-navegador .enlaces a {
-  font-size: 1.5rem;
-  color: #FDE8CD;
+  font-size: 1.2rem;
+  color: #433520;
   text-decoration: none;
 }
 
