@@ -29,11 +29,11 @@ Route::get('master', function(){
 Route::prefix('blog')->group(function () {
     //Route::resource('posts{post}', [PostsController::class, 'show'])->name('mostrar');
     Route::get('principal', [PostsController::class, 'index']);
-    Route::get('posts{post}', [PostsController::class, 'show'])->name('mostrarPost');
+    Route::get('posts/{post}', [PostsController::class, 'show'])->name('mostrarPost');
 
 
     Route::get('categorias', [PostsController::class, 'everyCategory'])->name('todasLasCategorias');
-    Route::get('categorias{categoria}', [PostsController::class, 'category'])->name('filtrarCategoria');
+    Route::get('categorias/{categoria}', [PostsController::class, 'showCategory'])->name('filtrarCategoria');
 });
 
 

@@ -104,12 +104,16 @@ class PostsController extends Controller
         //
     }
 
-    public function category(Category $category){
+    public function showCategory(Category $categoria){
+        $postCategoria = Post::where('category_id', $categoria->id)
+                    ->where('status', 1)
+                    ->latest('id')
+                    ->get();
 
+        return view('blog.postCategoria', compact('categoria', 'postCategoria'));
     }
 
-    public function everyCategory(Category $category){
-
+    public function everyCategory(Category $categoria){
         $categorias = Category::all();
         return view('blog.categorias', compact('categorias'));
     }

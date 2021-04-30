@@ -162,5 +162,31 @@ html {
             background-color: $verde;
             content: "";
         }
+
+        .comentario{
+            width: 70%;
+            margin-top: 1rem;
+            border: 1px solid $gris;
+            border-radius: 5px;
+
+            .autor{
+                width: 100%;
+                background-color: $gris;
+                color: white;
+                padding: 1rem;
+
+                span{
+                    width: 50%;
+                    height: 2rem;
+                    background-color: #FDE8CD;
+                    border-radius: 50%;
+                    content: "";
+                }
+            }
+
+            h3{
+                padding: 1rem;
+            }
+        }
     }
 }

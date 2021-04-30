@@ -20,7 +20,7 @@
     </div>
 
     <div class="imagen">
-        <img src="http://localhost/livemore/storage/{{$post->images[0]->url}}" alt="Imágen del post">
+        <img src="http://localhost/livemore/storage/{{$post->images[0]->url}}" alt="Imagen del post">
         <span> </span>
     </div>
 
@@ -48,7 +48,16 @@
         <span> </span>
 
         @foreach ($comments as $comentario)
-            <p>{{$comentario->id}}</p>
+            <div class="comentario">
+                <div class="autor">
+                    <p>{{$comentario->user-> name}} {{$comentario->user->surname}}</p>
+                    <p> {{$comentario->created_at}}</p>
+                    <span> </span>
+                </div>
+
+                <h3>{{$comentario->content}}</h3>
+
+            </div>
         @endforeach
     </div>
     @stop
