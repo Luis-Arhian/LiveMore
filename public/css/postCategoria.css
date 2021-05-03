@@ -1,5 +1,7 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap");
+/* TODO: Realizar diseño resposive. */
 /* Colores */
 html {
   -webkit-box-sizing: border-box;
@@ -49,6 +51,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  text-transform: uppercase;
 }
 
 .categoria .title h1 {
@@ -81,7 +84,8 @@ body {
   width: 50rem;
   height: 20rem;
   background-color: #433520;
-  margin: 4rem;
+  border-radius: 5px;
+  margin: 2.5rem auto;
 }
 
 .categoria .principales .content {
@@ -115,12 +119,42 @@ body {
   background-color: green;
   width: 50%;
   height: 100%;
+  border-radius: 0 5px 5px 0;
 }
 
 .categoria .grid {
   display: -ms-grid;
   display: grid;
+  margin: auto;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+}
+
+.categoria .grid .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: auto;
+}
+
+.categoria .grid .post img {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=postCategoria.css.map */

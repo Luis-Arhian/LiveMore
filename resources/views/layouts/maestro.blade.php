@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/nav.css')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <link rel="stylesheet" href="@yield('css')">
-    <title> </title>
+    <title> @yield('titulo') </title>
 </head>
 <body>
     @include('layouts.nav')

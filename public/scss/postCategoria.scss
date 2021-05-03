@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap');
 
+/* TODO: Realizar diseño resposive. */
+
 /* Colores */
 $verde: #3dd40b;
 $gris: #433520;
@@ -36,6 +38,7 @@ body{
         justify-content: center;
         align-items: center;
         width: 100%;
+        text-transform: uppercase;
 
         h1{
             font-size: 2.5rem;
@@ -59,7 +62,8 @@ body{
         width: 50rem;
         height: 20rem;
         background-color: #433520;
-        margin: 4rem;
+        border-radius: 5px;
+        margin: 2.5rem auto;
 
         .content{
             width: 50%;
@@ -84,15 +88,32 @@ body{
             background-color: green;
             width: 50%;
             height: 100%;
+            border-radius: 0 5px 5px 0;
         }
     }
 
     .grid{
         display: grid;
+        margin: auto;
         grid-template-columns: repeat(3, 1fr);
+        width: 80%;
 
         .post{
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 70%;
+            text-align: center;
+            font-size: 0.8rem;
+            margin: auto;
+
+            img{
+                width: 100%;
+                height: 50%;
+                margin-bottom: 1rem;
+                border-radius: 5px;
+            }
         }
     }
 }

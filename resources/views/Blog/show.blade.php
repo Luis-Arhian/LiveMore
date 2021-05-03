@@ -43,6 +43,7 @@
 
     </div>
 
+    {{-- TODO: Realizar estructura para insertar comentarios solamente si estas registrado. --}}
     <div class="comentarios">
         <h2> Comentarios </h2>
         <span> </span>

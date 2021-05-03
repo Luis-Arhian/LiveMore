@@ -1,6 +1,7 @@
 @extends('layouts.maestro')
     @section('css', asset("css/postCategoria.css"))
 
+    @section('titulo', $categoria->name)
     @section('contenido')
         <div class="categoria">
             <div class="title">
@@ -10,7 +11,7 @@
 
             <div class="posts">
                 @foreach ($postCategoria as $post)
-                    @if ($loop->first || $loop->index == 2)
+                    @if ($loop->index < 2)
                             <div class="principales">
                                     <div class="content">
                                         <h1> {{$post->title}} </h1>
@@ -20,22 +21,22 @@
                                 <img src="http://localhost/livemore/storage/{{$post->images[0]->url}}" alt="">
                             </div>
 
-                    @elseif ($loop->index==3)
+                    @elseif ($loop->index == 3)
                         <div class="grid">
-
+                            @foreach ($postCategoria as $post2)
+                                @if ($loop->index >= 2)
+                                <div class="post">
+                                    <img src="http://localhost/livemore/storage/{{$post2->images[0]->url}}" alt="{{$post2->title}}">
+                                    <h3> {{$post2->title}}</h3>
+                                </div>
+                                @endif
+                            @endforeach
                         </div>
+
                     @endif
                 @endforeach
 
 
-                @foreach ($postCategoria as $post)
-                    @if ($loop->index > 2)
-                        <div class="post">
-                            <img src="http://localhost/livemore/storage/{{$post->images[0]->url}}" alt="{{$post->title}}">
-                            <h3> {{$post->title}}</h3>
-                        </div>
-                    @endif
-                @endforeach
             </div>
         </div>
     @stop
