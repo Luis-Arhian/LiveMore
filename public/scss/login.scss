@@ -117,11 +117,16 @@ body {
                 padding-top: 2rem;
                 font-size: 1.2rem;
                 color: $black;
-                span{
+                a{
                     cursor: pointer;
                     font-weight: bold;
+                    text-decoration: none;
                 }
             }
         }
+    }
+
+    .error{
+        color: red;
     }
 }

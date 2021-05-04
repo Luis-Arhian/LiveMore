@@ -85,10 +85,34 @@ body{
         }
 
         img{
-            background-color: green;
             width: 50%;
             height: 100%;
             border-radius: 0 5px 5px 0;
+        }
+
+        &.inactivo{
+            display: none;
+        }
+    }
+
+    .postResponsive{
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+
+        .post{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 70%;
+            text-align: center;
+            font-size: 0.8rem;
+            margin: auto;
+        }
+        &.inactivo{
+            display: none;
         }
     }
 
@@ -113,6 +137,23 @@ body{
                 height: 50%;
                 margin-bottom: 1rem;
                 border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px){
+    .categoria{
+        .principales{
+            width: 80%;
+            font-size: 0.5rem;
+        }
+
+        .grid{
+            grid-template-columns: repeat(2, 1fr);
+
+            .post{
+                margin-bottom: 2rem;
             }
         }
     }

@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
-    <link rel="stylesheet" href="{{asset('scss/login.css')}}">
+    <link rel="stylesheet" href="{{asset('css/login.css')}}">
 </head>
 <body>
     <main class="container">
@@ -79,9 +79,7 @@
                     </div>
 
                     <div class="registrate"> ¿Todavia no has comenzado?
-                        <span>
-                            Registrate
-                        </span>
+                        <a href="{{Route('register')}}"> Registrate </a>
                     </div>
                 </div>
             </div>

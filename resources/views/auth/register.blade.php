@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
-    <link rel="stylesheet" href="{{asset('scss/register.css')}}">
+    <link rel="stylesheet" href="{{asset('css/register.css')}}">
 </head>
 <body>
     <main class="container">

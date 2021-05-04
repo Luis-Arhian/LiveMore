@@ -116,10 +116,46 @@ body {
 }
 
 .categoria .principales img {
-  background-color: green;
   width: 50%;
   height: 100%;
   border-radius: 0 5px 5px 0;
+}
+
+.categoria .principales.inactivo {
+  display: none;
+}
+
+.categoria .postResponsive {
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+}
+
+.categoria .postResponsive .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: auto;
+}
+
+.categoria .postResponsive.inactivo {
+  display: none;
 }
 
 .categoria .grid {
@@ -156,5 +192,19 @@ body {
   height: 50%;
   margin-bottom: 1rem;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  .categoria .principales {
+    width: 80%;
+    font-size: 0.5rem;
+  }
+  .categoria .grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .categoria .grid .post {
+    margin-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=postCategoria.css.map */
