@@ -38,7 +38,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validamos los valores a introducir y al crear la categoria redirigimos a la vista editar para que el admin pueda introducir datos relevantes.
+        $request->validate([
+            'name' => 'required',
+            'slug' => 'required|unique:categories'
+        ]);
+
+        $categoria = Category::create($request->all());
+
+        return redirect()->route('admin.categories.edit', $categoria)
+            ->with('info', 'Se ha creado la categoria correctamente.');
     }
 
     /**
@@ -72,7 +81,16 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        return view('admin.categories.update');
+        // Validamos los valores a introducir y al crear la categoria redirigimos a la vista editar para que el admin pueda introducir datos relevantes.
+        $request->validate([
+            'name' => 'required',
+            'slug' => "required|unique:categories,slug,$category->id"
+        ]);
+
+        $category->update(($request->all()));
+
+        return redirect()->route('admin.categories.edit', $category)
+        ->with('info', 'Se ha actualizado la categoria correctamente.');
     }
 
     /**
@@ -81,8 +99,11 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return redirect()->route('admin.categories.index')
+            ->with('info', 'Se ha eliminado la categoria correctamente.');
     }
 }
