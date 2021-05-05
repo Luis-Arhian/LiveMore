@@ -1,8 +1,4 @@
-html {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Metrophobic&family=Montserrat&display=swap');
 
 /* Colores */
 $verde: #4AFF0B;
@@ -13,6 +9,12 @@ $crema: #FDE8CD;
 $black: #363636;
 $light_grey: #d3d3d3;
 
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
 *,
 *:before,
 *:after {
@@ -22,7 +24,7 @@ $light_grey: #d3d3d3;
 }
 
 .posts{
-    width: 98vw;
+    width: 100vw;
     height: 100vh;
 
     .post_principal{
@@ -38,6 +40,7 @@ $light_grey: #d3d3d3;
             width: 50rem;
             height: 10rem;
             background-color: $light_grey;
+            font-family: 'Montserrat', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,6 +49,8 @@ $light_grey: #d3d3d3;
             margin-top: auto;
             position: relative;
             top: 10rem;
+            text-decoration: none;
+            color: $black;
 
             .categoria{
                 position: relative;
@@ -56,6 +61,8 @@ $light_grey: #d3d3d3;
                 justify-content: center;
                 width: 100%;
                 padding: 1rem 0;
+                text-decoration: none;
+                color: $black;
 
                 span{
                     width: 100%;
@@ -69,6 +76,7 @@ $light_grey: #d3d3d3;
                     justify-self: center;
                     font-weight: bold;
                     text-transform: uppercase;
+                    font-family: 'Metrophobic', cursive;
                 }
             }
 
@@ -80,7 +88,7 @@ $light_grey: #d3d3d3;
 
         .nav{
             width: 100%;
-            height: 10%;
+            height: 5.6rem;
             margin-top: auto;
             background-color: $verde;
             display: flex;
@@ -91,7 +99,7 @@ $light_grey: #d3d3d3;
 
             .logo{
                 width: 20%;
-                height: 70%;
+                height: 4rem;
             }
 
             .enlaces{
@@ -132,16 +140,19 @@ $light_grey: #d3d3d3;
             color: $crema;
 
             h1{
+                font-family: 'Montserrat', sans-serif;
                 font-size: 1.5rem;
                 font-weight: 600;
             }
 
             h2{
+                font-family: 'Metrophobic', sans-serif;
                 font-size: 0.8rem;
                 font-weight: 400;
             }
 
             h3{
+                font-family: 'Forum', cursive;
                 font-size: 0.7rem;
                 font-weight: 200;
                 margin-top: 1.5rem;

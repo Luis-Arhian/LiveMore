@@ -153,8 +153,13 @@ body {
   color: #363636;
 }
 
-.container .loginContainer .card .registrate span {
+.container .loginContainer .card .registrate a {
   cursor: pointer;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.container .error {
+  color: red;
 }
 /*# sourceMappingURL=login.css.map */

@@ -3,7 +3,7 @@
 @section('title', 'LiveMore')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1> Editar categorias </h1>
 @stop
 
 @section('content')

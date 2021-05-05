@@ -15,7 +15,7 @@
             <!-- Primer post -->
             @if($loop->first)
                 <div class='post_principal' style='background-image: url("http://localhost/livemore/storage/{{$post->images[0]->url}}"')">
-                    <div class="tituloPost">
+                    <a href="{{route('mostrarPost', $post)}}" class="tituloPost">
                         <div class="categoria">
                             <span> </span>
                              <p> {{$post->categories->name}}</p>
@@ -23,7 +23,7 @@
                         </div>
 
                         <h1> {{$post->title}} </h1>
-                    </div>
+                    </a>
 
                     <!-- Menu de navegación -->
                     <div class="nav">
@@ -77,17 +77,17 @@
 
                 <div class="posts_categoria">
                     @foreach ($categoria->posts as $postCategoria)
-                        <div class="post">
-                            <img src="http://localhost/livemore/storage/{{$postCategoria->images[0]->url}}" alt="">
-                            <div class="title">
-                                <a href="{{route('mostrarPost', $postCategoria)}}"> {{$post->title}} </a>
+                        @if ($loop->index <= 3)
+                            <div class="post">
+                                <img src="http://localhost/livemore/storage/{{$postCategoria->images[0]->url}}" alt="">
+                                <div class="title">
+                                    <a href="{{route('mostrarPost', $postCategoria)}}"> {{$post->title}} </a>
+                                </div>
                             </div>
-                        </div>
+                        @endif
                     @endforeach
                 </div>
-
         @endforeach
     </div>
-
 </body>
 </html>
