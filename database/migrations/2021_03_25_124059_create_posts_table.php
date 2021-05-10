@@ -16,8 +16,8 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id'); // ID del post.
             $table->string('title'); // Titulo del post.
-            $table->string('brief'); // Breve descripcion del post.
-            $table->text('content'); // Contenido completo del post.
+            $table->string('brief')->nullable(); // Breve descripcion del post.
+            $table->text('content')->nullable(); // Contenido completo del post.
             $table->boolean('status'); // Indica si el post está publicado o sin publicar.
             $table->bigInteger('category_id')->unsigned(); // Referencia al modelo de categoria/s a las que pertenece.
             $table->foreign('category_id')->references('id')->on('categories');

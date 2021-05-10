@@ -70,6 +70,9 @@
 
         <!-- Post por categoria -->
         @foreach ($categorias as $categoria)
+
+            {{-- Si hay contenido en la categoria se mostrará, en caso contrario no. --}}
+            @if($categoria->posts->count())
                 <div class="categoria">
                     <h1> {{$categoria->name}}</h1>
                     <span> </span>
@@ -87,6 +90,7 @@
                         @endif
                     @endforeach
                 </div>
+            @endif
         @endforeach
     </div>
 </body>

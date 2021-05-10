@@ -27,4 +27,6 @@ class Category extends Model
     {
         return 'slug';
     }
+
+    // TODO: Agregar imagen a cada categoria. 
 }

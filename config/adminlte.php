@@ -288,22 +288,17 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        ['header' => 'Opciones de posts'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'       => 'Todos los posts',
+            'icon'       => 'fas fa-list',
+            'route'      => 'admin.posts.index',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+            'text'       => 'Nuevo post',
+            'icon'       => 'fas fa-plus',
+            'route'      => 'admin.posts.create',
+        ]
     ],
 
     /*
@@ -424,5 +419,5 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Other-Configuration
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];
