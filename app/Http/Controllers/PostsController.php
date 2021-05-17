@@ -22,9 +22,7 @@ class PostsController extends Controller
         // Obtener los post con status 1, es decir, los que se encuentran publicados.
         $posts_publicados = Post::SELECT('*')
                             ->where('status', 1)
-                            //->where('category_id', $categorias->id)
                             ->orderBy('id', 'desc')
-                            //->take(4)
                             ->get();
 
         // Devolvemos la vista pero pasando los resultados obtenidos anteriormente.

@@ -14,16 +14,19 @@
         @foreach ($posts_publicados as $post)
             <!-- Primer post -->
             @if($loop->first)
-                <div class='post_principal' style='background-image: url("http://localhost/livemore/storage/{{$post->images[0]->url}}"')">
-                    <a href="{{route('mostrarPost', $post)}}" class="tituloPost">
-                        <div class="categoria">
-                            <span> </span>
-                             <p> {{$post->categories->name}}</p>
-                            <span> </span>
-                        </div>
+                <div class='post_principal' style='background-image: url(
+                    @if($post->images) "http://localhost/livemore/storage/app/{{$post->images->url}}"
+                    @else "http://localhost/livemore/storage/app/posts_images/default_image.jpg"
+                    @endif'>
+                        <a href="{{route('mostrarPost', $post)}}" class="tituloPost">
+                            <div class="categoria">
+                                <span> </span>
+                                <p> {{$post->categories->name}}</p>
+                                <span> </span>
+                            </div>
 
-                        <h1> {{$post->title}} </h1>
-                    </a>
+                            <h1> {{$post->title}} </h1>
+                        </a>
 
                     <!-- Menu de navegación -->
                     <div class="nav">
@@ -48,23 +51,37 @@
                             <a href="#"> Categorias </a>
                             <a href="#"> Articulos </a>
                             <a href="#"> Contacto </a>
+
+                            <div class="menu">
+                                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 6a2 2 0 012-2h16a2 2 0 110 4H4a2 2 0 01-2-2zm0 6a2 2 0 012-2h16a2 2 0 110 4H4a2 2 0 01-2-2zm0 6a2 2 0 012-2h16a2 2 0 110 4H4a2 2 0 01-2-2z" fill="currentColor"/></svg>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="menuResponsive activo">
+                            <a href="#"> Principal</a>
+                            <a href="#"> Categorias </a>
+                            <a href="#"> Articulos </a>
+                            <a href="#"> Contacto </a>
                     </div>
                 </div>
             @endif
 
             <!-- Segundo post -->
-            @if ($loop->index == 2)
-                <div class="postSecundario">
+            @if ($loop->index == 1)
+                <a href="{{route('mostrarPost', $post)}}"class="postSecundario">
                     <div class="contenido">
                         <h1> {{$post->title}}</h1>
-                        <h2> {{$post->brief}}</h2>
+                        <h2> {!!$post->brief!!}</h2>
                         <h3> Articulo de {{$post->user->name}} {{$post->user->surname}}</h3>
                     </div>
 
-                    <div class="imagen" style='background-image: url("http://localhost/livemore/storage/{{$post->images[0]->url}}"')">
+                    <div class="imagen" style='background-image: url(
+                        @if($post->images) "http://localhost/livemore/storage/app/{{$post->images->url}}"
+                        @else "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                        @endif)'>
                     </div>
-                </div>
+                </a>
             @endif
          @endforeach
 
@@ -74,7 +91,9 @@
             {{-- Si hay contenido en la categoria se mostrará, en caso contrario no. --}}
             @if($categoria->posts->count())
                 <div class="categoria">
-                    <h1> {{$categoria->name}}</h1>
+                    <a href="{{route('filtrarCategoria', $categoria)}}">
+                        <h1> {{$categoria->name}}</h1>
+                    </a>
                     <span> </span>
                 </div>
 
@@ -82,9 +101,13 @@
                     @foreach ($categoria->posts as $postCategoria)
                         @if ($loop->index <= 3)
                             <div class="post">
-                                <img src="http://localhost/livemore/storage/{{$postCategoria->images[0]->url}}" alt="">
+                                @if($postCategoria->images)
+                                    <img src="http://localhost/livemore/storage/app/{{$postCategoria->images->url}}" alt="">
+                                @else
+                                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+                                @endif
                                 <div class="title">
-                                    <a href="{{route('mostrarPost', $postCategoria)}}"> {{$post->title}} </a>
+                                    <a href="{{route('mostrarPost', $postCategoria)}}"> {{$postCategoria->title}} </a>
                                 </div>
                             </div>
                         @endif

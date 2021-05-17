@@ -36,6 +36,8 @@ Route::prefix('blog')->group(function () {
     Route::get('categorias/{categoria}', [PostsController::class, 'showCategory'])->name('filtrarCategoria');
 });
 
+Route::resource('comments', CommentsController::class);
+
 
 // LOGIN
 Auth::routes();

@@ -2,6 +2,9 @@
 
 @section('title', 'LiveMore')
 
+@section('css')
+    <link rel="stylesheet" href="{{asset("css/createPost.css")}}">
+@stop
 @section('js')
     <script src="{{asset('js/admin/slugmaker.js')}}"> </script>
     {{--Editor de texto enriquecido para introducir contenido en el post. --}}
@@ -19,6 +22,21 @@
             .catch( error => {
                 console.error( error );
             } );
+
+            // Cambiar imagen.
+            document.getElementById('file').addEventListener('change', cambiarImagen);
+
+            function cambiarImagen(event){
+                var file = event.target.files[0];
+
+                var read = new FileReader();
+
+                read.onload = (event) => {
+                    document.getElementById('image').setAttribute('src', event.target.result);
+                };
+
+                read.readAsDataURL(file);
+            }
     </script>
 @stop
 
@@ -29,44 +47,14 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route'=>'admin.posts.store', 'autocomplete'=>'off'])!!}
+            {!! Form::open(['route'=>'admin.posts.store', 'autocomplete'=>'off', 'files' => 'true'])!!}
 
-            <div class="form-group">
-                {!! Form::label('name', 'Titulo: ') !!}
-                {!! Form::text('name', null, ['class'=>'form-control', 'placeholder' =>'Introduzca el titulo del post.']) !!}
+            {{-- Campo oculto para mandar el id del usuario autentificado. --}}
+            {!! Form::hidden('user_id', auth()->user()->id) !!}
 
-                {!! Form::label('slug', 'Slug: ') !!}
-                {!! Form::text('slug', null, ['class'=>'form-control', 'placeholder' =>'Introduzca el slug del post.', 'readonly']) !!}
-            </div>
+            @include('admin.posts.partials.form')
 
-            <div class="form-group">
-                {!! Form::label('category_id', 'Categoria') !!}
-                {!! Form::select('category_id', $categorias, null, ['class'=>'form-control']) !!}
-            </div>
-
-            <div class="form-group">
-                {!! Form::label('brief', 'Brief (Descripción): ') !!}
-                {!! Form::textarea('brief',  null, ['class'=>'form-control', 'placeholder' => 'Introduce una descripción o resumen del post para que el usuario conozca acerca de lo que va a leer.']) !!}
-            </div>
-
-            <div class="form-group">
-                {!! Form::label('content', 'Contenido: ') !!}
-                {!! Form::textarea('content',  null, ['class'=>'form-control', 'placeholder' => 'Aqui se introduce todo el contenido del post.']) !!}
-            </div>
-
-            <div class="form-group">
-                <p class=""> Opciones de publicación: </p>
-
-                <label>
-                    {!! Form::radio('status', 0, true) !!}
-                    Sin publicar
-                </label>
-
-                <label>
-                    {!! Form::radio('status', 1) !!}
-                    Publicado
-                </label>
-            </div>
+            {!! Form::submit('Crear post', ['class' => 'btn btn-success'])!!}
         </div>
     </div>
 @stop

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Metrophobic&family=Montserrat&display=swap');
 
 /* Colores */
 $verde: #3dd40b;
@@ -10,7 +9,7 @@ $crema: #FDE8CD;
 
 html {
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -29,7 +28,7 @@ html {
         justify-content: flex-start;
         left: 15%;
         width: 50%;
-        height: 17rem;
+        height: 10rem;
 
         h1{
             font-size: 2.5rem;
@@ -55,6 +54,8 @@ html {
     }
 
     .brief{
+        font-family: 'Forum', sans-serif;
+        font-weight: 600;
         display: flex;
         justify-content: center;
         align-items: flex-center;
@@ -76,8 +77,9 @@ html {
 
         img{
             width: 70%;
-            height: 12rem;
+            height: 17rem;
             margin: 1.5rem 0;
+            object-fit: cover;
         }
 
         span{
@@ -91,11 +93,11 @@ html {
     }
 
     .contenido{
-        width: 70%;
-        margin: auto;
+        font-family: 'Metrophobic', sans-serif;
+        width: 60%;
+        margin: 2rem auto 2rem auto;
         font-size: 1rem;
         text-align: justify;
-        margin-bottom: 2rem;
     }
 
     .post_relacionados{
@@ -118,7 +120,7 @@ html {
 
         .posts{
             width: 80%;
-            height: 15rem;
+            height: 20%;
             display: grid;
             grid-template-columns: repeat(3,1fr);
             margin: 3rem;
@@ -128,10 +130,13 @@ html {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                text-decoration: none;
+                color: $gris;
 
                 img{
                     width: 70%;
                     height: 70%;
+                    object-fit: cover;
                 }
 
                 h2{

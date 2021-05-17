@@ -1,6 +1,8 @@
 @extends('layouts.maestro')
 
     @section('css', asset("css/articulos.css"));
+    @section('titulo', $post->title)
+
     @section('contenido')
 
     <div class="title">
@@ -8,6 +10,7 @@
 
         <div class="autor">
             <h2> {{$post->user->name}} {{$post->user->surname}} </h2>
+            <h3> {{$post->images->url}}</h3>
         </div>
 
         <span> </span>
@@ -15,17 +18,22 @@
 
     <div class="brief">
         <p>
-            {{$post->brief}} {{$post->brief}}
+            {!!$post->brief!!}
         </p>
     </div>
 
     <div class="imagen">
-        <img src="http://localhost/livemore/storage/{{$post->images[0]->url}}" alt="Imagen del post">
+        @if($post->images)
+            <img src="http://localhost/livemore/public/storage/{{$post->images->url}}" alt="Imagen del post">
+        @else
+            <img src="http://localhost/livemore/storage/app/posts_images/default_image.jpg" alt="Imagen del post">
+        @endif
+
         <span> </span>
     </div>
 
     <div class="contenido">
-        {{$post->content}}
+        {!!$post->content!!}
     </div>
 
     <div class="post_relacionados">
@@ -35,7 +43,13 @@
         <div class="posts">
             @foreach ($post_similares as $relacionado)
                 <a href="">
-                    <img src="http://localhost/livemore/storage/{{$relacionado->images[0]->url}}" alt="">
+                    @if($relacionado->images)
+                        <img src="http://localhost/livemore/storage/app/public/{{$relacionado->images->url}}" alt="">
+
+                    @else
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Error al cargar la imágen">
+                    @endif
+
                     <h2> {{$relacionado->title}}</h2>
                 </a>
             @endforeach
@@ -48,6 +62,15 @@
         <h2> Comentarios </h2>
         <span> </span>
 
+        <div class="enviarComentario">
+            {!! Form::open(['route' => 'comments.store', 'method' => 'POST']) !!}
+            {!! Form::textarea('content', null, ['placeholder' => 'Introduce un comentario.']) !!}
+            {!! Form::hidden('post_id', $post->id) !!}
+
+            {!! Form::submit('Enviar') !!}
+
+            {!! Form::close() !!}
+        </div>
         @foreach ($comments as $comentario)
             <div class="comentario">
                 <div class="autor">

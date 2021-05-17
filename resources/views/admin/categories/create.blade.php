@@ -18,8 +18,8 @@
             {!!Form::open(['route' => 'admin.categories.store']) !!}
 
                 <div class="form-group">
-                    {!! Form::label('name', 'Nombre') !!}
-                    {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Introduzca el nombre de la categoria.']) !!}
+                    {!! Form::label('title', 'Nombre') !!}
+                    {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Introduzca el nombre de la categoria.']) !!}
 
                     {{-- Comprobación de errores al introducir nombre de categoria. --}}
                     @error('name')

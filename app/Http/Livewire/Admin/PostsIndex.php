@@ -12,7 +12,7 @@ class PostsIndex extends Component
     use WithPagination;
 
     // Variable que utilizaremos para realizar un buscador con livewire.
-    public $buscador = 'hola';
+    public $buscador = '';
 
     // Cada vez que el campo buscador cambie se resetea la paginación.
     public function actualizandoBuscador(){

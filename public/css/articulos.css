@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Metrophobic&family=Montserrat&display=swap");
 /* Colores */
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 *, *:before, *:after {
@@ -34,7 +33,7 @@ html {
           justify-content: flex-start;
   left: 15%;
   width: 50%;
-  height: 17rem;
+  height: 10rem;
 }
 
 .articulo .title h1 {
@@ -65,6 +64,8 @@ html {
 }
 
 .articulo .brief {
+  font-family: 'Forum', sans-serif;
+  font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,8 +101,10 @@ html {
 
 .articulo .imagen img {
   width: 70%;
-  height: 12rem;
+  height: 17rem;
   margin: 1.5rem 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .articulo .imagen span {
@@ -114,11 +117,11 @@ html {
 }
 
 .articulo .contenido {
-  width: 70%;
-  margin: auto;
+  font-family: 'Metrophobic', sans-serif;
+  width: 60%;
+  margin: 2rem auto 2rem auto;
   font-size: 1rem;
   text-align: justify;
-  margin-bottom: 2rem;
 }
 
 .articulo .post_relacionados {
@@ -151,7 +154,7 @@ html {
 
 .articulo .post_relacionados .posts {
   width: 80%;
-  height: 15rem;
+  height: 20%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -173,11 +176,15 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
+  color: #433520;
 }
 
 .articulo .post_relacionados .posts a img {
   width: 70%;
   height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .articulo .post_relacionados .posts a h2 {

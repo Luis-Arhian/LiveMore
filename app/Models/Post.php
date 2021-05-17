@@ -11,6 +11,9 @@ class Post extends Model
 
     protected $table = 'Posts';
 
+    // Evito la asignación másiva en los siguientes campos.
+    protected $guarded = ['id', 'created_at', 'updated_at'];
+
     public function comments(){
         return $this->hasMany(Comment::class);
     }
@@ -24,7 +27,7 @@ class Post extends Model
     }
 
     public function images(){
-        return $this->morphMany(Image::class, 'model');
+        return $this->morphOne(Image::class, 'model');
     }
 
     public function mainImage(){
