@@ -14,7 +14,6 @@
 
         <div class="autor">
             <h2> {{$post->user->name}} {{$post->user->surname}} </h2>
-            <h3> {{$post->images->url}}</h3>
         </div>
 
         <span> </span>
@@ -28,7 +27,7 @@
 
     <div class="imagen">
         @if($post->images)
-            <img src="http://localhost/livemore/public/storage/{{$post->images->url}}" alt="Imagen del post">
+            <img src="http://localhost/livemore/storage/app/{{$post->images->url}}" alt="Imagen del post">
         @else
             <img src="http://localhost/livemore/storage/app/posts_images/default_image.jpg" alt="Imagen del post">
         @endif

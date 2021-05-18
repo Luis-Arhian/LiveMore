@@ -33,7 +33,7 @@ html {
           justify-content: flex-start;
   left: 15%;
   width: 50%;
-  height: 10rem;
+  height: 13rem;
 }
 
 .articulo .title h1 {
@@ -72,15 +72,14 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: flex-center;
-      -ms-flex-align: flex-center;
-          align-items: flex-center;
-  justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
 .articulo .brief p {
-  width: 60%;
+  width: 80%;
   font-size: 1rem;
   text-align: center;
 }
@@ -101,7 +100,7 @@ html {
 
 .articulo .imagen img {
   width: 70%;
-  height: 17rem;
+  height: 20rem;
   margin: 1.5rem 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -248,5 +247,38 @@ html {
 
 .articulo .comentarios .comentario h3 {
   padding: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .articulo .title {
+    width: 80%;
+  }
+  .articulo .brief {
+    background-color: transparent;
+    width: 70%;
+    display: block;
+    margin: auto;
+  }
+  .articulo .brief p {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .articulo .post_relacionados .posts {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .articulo .title {
+    width: 95%;
+    height: 15rem;
+    left: 5%;
+  }
 }
 /*# sourceMappingURL=articulos.css.map */
