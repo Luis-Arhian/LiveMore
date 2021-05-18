@@ -1,5 +1,9 @@
 @extends('layouts.maestro')
 
+@section('js')
+        <script src="{{asset('ts/blog.js')}}"></script>
+@stop
+
     @section('css', asset("css/articulos.css"));
     @section('titulo', $post->title)
 

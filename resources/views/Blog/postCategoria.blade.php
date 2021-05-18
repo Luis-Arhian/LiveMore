@@ -1,8 +1,5 @@
 @extends('layouts.maestro')
     @section('css', asset("css/postCategoria.css"))
-    @section('js')
-        <script src="resources/js/postCategoriasResponsive.js"></script>
-    @stop
 
     @section('titulo', $categoria->name)
     @section('contenido')
@@ -16,12 +13,16 @@
                 @foreach ($postCategoria as $post)
                     @if ($loop->index < 2)
                             <div class="principales">
-                                    <div class="content">
-                                        <h1> {{$post->title}} </h1>
-                                        <h2> {{$post->brief}}</h2>
-                                        <h3> {{$post->user->name}} {{$post->user->surname}} </h3>
-                                    </div>
-                                <img src="http://localhost/livemore/storage/{{$post->images[0]->url}}" alt="">
+                                <div class="content">
+                                    <h1> {{$post->title}} </h1>
+                                    <h2> {{$post->brief}}</h2>
+                                    <h3> {{$post->user->name}} {{$post->user->surname}} </h3>
+                                </div>
+                                @if($post->images)
+                                    <img src="http://localhost/livemore/storage/app/{{$post->images->url}}" alt="">
+                                    @else
+                                    <img src="http://localhost/livemore/storage/app/{{$post->images->url}}" alt="">
+                                @endif
                             </div>
 
                             <div class="postResponsive inactivo">

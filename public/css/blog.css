@@ -146,17 +146,17 @@ html {
           align-items: center;
 }
 
+.posts .post_principal .nav .enlaces .close {
+  display: none;
+}
+
 .posts .post_principal .nav .enlaces a {
-  color: #fff;
+  color: #d3d3d3;
   font-size: 1.2rem;
   text-decoration: none;
 }
 
-.posts .post_principal .nav .enlaces .menu {
-  display: none;
-}
-
-.posts .post_principal .menuResponsive {
+.posts .post_principal .nav .menu {
   display: none;
 }
 
@@ -248,7 +248,7 @@ html {
 
 .posts .categoria a {
   text-decoration: none;
-  color: black;
+  color: #363636;
   width: 15%;
 }
 
@@ -309,31 +309,127 @@ html {
   .posts .post_principal .tituloPost {
     width: 25rem;
   }
-  .posts .post_principal .nav .enlaces a {
-    display: none;
-  }
-  .posts .post_principal .nav .enlaces .menu {
+  .posts .post_principal .nav .enlaces {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #433520;
+    z-index: 2;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  .posts .post_principal .nav .enlaces.activo {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  .posts .post_principal .nav .enlaces .close {
+    display: inline-block;
+  }
+  .posts .post_principal .nav .enlaces .close svg {
+    fill: white;
+    width: 4rem;
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    -webkit-transition: color 0.2s ease, -webkit-transform 0.2s ease;
+    transition: color 0.2s ease, -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
+  }
+  .posts .post_principal .nav .enlaces .close svg:hover {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+    fill: red;
+  }
+  .posts .post_principal .nav .enlaces a {
+    display: inline;
+    color: #d3d3d3;
+    -webkit-transition: color 0.2s ease, -webkit-transform 0.2s ease;
+    transition: color 0.2s ease, -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
+  }
+  .posts .post_principal .nav .enlaces a:hover {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+    color: #4AFF0B;
+  }
+  .posts .post_principal .nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
+  }
+  .posts .postSecundario {
+    margin: 2rem auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .posts .postSecundario .contenido {
+    border-radius: 5px 5px 0 0;
+  }
+  .posts .postSecundario .imagen {
+    border-radius: 0 0 5px 5px;
+  }
+  .posts .categoria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .posts .categoria a {
+    width: auto;
+  }
+  .posts .categoria span {
+    margin-left: 0;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .posts .posts_categoria {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .posts .post_principal .tituloPost {
+    width: 10%;
     background-color: red;
-  }
-  .posts .post_principal .nav .enlaces .menu svg {
-    color: white;
-    width: 5rem;
-    height: 5rem;
-  }
-  .posts .post_principal .nav .menuResponsive.activo {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: #433520;
   }
 }
 /*# sourceMappingURL=blog.css.map */

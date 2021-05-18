@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" href="{{asset('css/blog.css')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <script src="{{asset('ts/blog.js')}}"></script>
     <title> Página principal </title>
 </head>
 <body>
@@ -47,22 +48,18 @@
                         </div>
 
                         <div class="enlaces">
-                            <a href="#"> Principal</a>
-                            <a href="#"> Categorias </a>
-                            <a href="#"> Articulos </a>
-                            <a href="#"> Contacto </a>
-
-                            <div class="menu">
-                                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 6a2 2 0 012-2h16a2 2 0 110 4H4a2 2 0 01-2-2zm0 6a2 2 0 012-2h16a2 2 0 110 4H4a2 2 0 01-2-2zm0 6a2 2 0 012-2h16a2 2 0 110 4H4a2 2 0 01-2-2z" fill="currentColor"/></svg>
+                            <div class="close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-m</title><path d="M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z"/></svg>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="menuResponsive activo">
                             <a href="#"> Principal</a>
                             <a href="#"> Categorias </a>
                             <a href="#"> Articulos </a>
                             <a href="#"> Contacto </a>
+
+                        </div>
+                        <div class="menu">
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+                        </div>
                     </div>
                 </div>
             @endif
