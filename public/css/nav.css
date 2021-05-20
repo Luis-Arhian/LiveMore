@@ -14,6 +14,22 @@ html {
 
 body {
   font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: .4rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3dd40b;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
 }
 
 body .navegador {
@@ -39,8 +55,9 @@ body .navegador .contenedor-navegador {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -145,6 +162,7 @@ body .navegador .contenedor-navegador .menu {
     -webkit-transform: translateX(4px);
             transform: translateX(4px);
     fill: red;
+    cursor: pointer;
   }
   body .navegador .contenedor-navegador .enlaces.activo a {
     position: relative;
@@ -168,6 +186,7 @@ body .navegador .contenedor-navegador .menu {
     -webkit-transform: translateX(4px);
             transform: translateX(4px);
     fill: #3dd40b;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=nav.css.map */

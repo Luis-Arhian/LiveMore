@@ -26,6 +26,6 @@ class CommentsController extends Controller
             'post_id' => $post->id
         ]);
 
-        return redirect()->route('mostrarPost.show', $post);
+        return redirect()->route('mostrarPost', $post);
     }
 }

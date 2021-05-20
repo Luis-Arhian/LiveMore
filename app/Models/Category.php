@@ -19,7 +19,7 @@ class Category extends Model
     }
 
     public function images(){
-        return $this->morphMany(Image::class, 'model');
+        return $this->hasOne(Image::class, 'model');
     }
 
     // Indicamos a Laravel que queremos que muestre el slug en lugar del id en la URL.
@@ -28,5 +28,5 @@ class Category extends Model
         return 'slug';
     }
 
-    // TODO: Agregar imagen a cada categoria. 
+    // TODO: Agregar imagen a cada categoria.
 }

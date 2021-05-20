@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Metrophobic&family=Montserrat&display=swap');
 
 /* TODO: Realizar diseño resposive. */
 
@@ -12,7 +11,7 @@ $crema: #FDE8CD;
 
 html {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -22,8 +21,6 @@ html {
 body{
     font-size: 62.5%;
 }
-
-
 
 .categoria{
     display: flex;

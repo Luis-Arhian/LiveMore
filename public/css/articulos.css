@@ -179,16 +179,73 @@ html {
   color: #433520;
 }
 
-.articulo .post_relacionados .posts a img {
-  width: 70%;
-  height: 70%;
+.articulo .post_relacionados .posts a figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.articulo .post_relacionados .posts a figure img {
+  position: relative;
+  width: 20rem;
+  height: 15rem;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
+}
+
+.articulo .post_relacionados .posts a figure .info {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  color: white;
+}
+
+.articulo .post_relacionados .posts a figure:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 1;
+}
+
+.articulo .post_relacionados .posts a figure:hover .info {
+  opacity: 1;
+  visibility: visible;
+  color: wheat;
+}
+
+.articulo .post_relacionados .posts a figure:hover .info h1 {
+  color: white;
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  font-family: 'Metrophobic', sans-serif;
+}
+
+.articulo .post_relacionados .posts a figure:hover .info p {
+  font-family: 'Forum', sans-serif;
+  color: white;
+  padding: 1.2rem;
+  text-align: justify;
+}
+
+.articulo .post_relacionados .posts a figure:hover + h2 {
+  display: none;
 }
 
 .articulo .post_relacionados .posts a h2 {
   width: 50%;
-  padding: .5rem;
+  padding: 1rem;
   text-align: center;
   text-decoration: none;
 }
@@ -221,6 +278,75 @@ html {
   height: 0.2rem;
   background-color: #3dd40b;
   content: "";
+}
+
+.articulo .comentarios .enviarComentario {
+  margin: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.articulo .comentarios .enviarComentario form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.articulo .comentarios .enviarComentario form textarea {
+  border-radius: 5px;
+  background-color: #433520;
+  color: #FDE8CD;
+  resize: none;
+  padding: 1.6rem;
+  height: 10%;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.articulo .comentarios .enviarComentario form input {
+  margin: 1.2rem;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  border-radius: 5px;
+  border: none;
+  width: 4rem;
+  height: 2rem;
+  background-color: #3dd40b;
+  -webkit-transition: background-color 0.25s ease, -webkit-transform 0.25s ease, -webkit-box-shadow 0.25s ease;
+  transition: background-color 0.25s ease, -webkit-transform 0.25s ease, -webkit-box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease, -webkit-box-shadow 0.25s ease;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.articulo .comentarios .enviarComentario form input:hover {
+  -webkit-transform: translate3d(0px, -1px, 0px);
+          transform: translate3d(0px, -1px, 0px);
+  background-color: #43eb0c;
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 .articulo .comentarios .comentario {
@@ -267,10 +393,25 @@ html {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1240px) {
   .articulo .post_relacionados .posts {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+  .articulo .post_relacionados .posts img {
+    width: 15rem;
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .articulo .post_relacionados .posts {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .articulo .post_relacionados .posts img {
+    width: 15rem;
+    height: 10rem;
   }
 }
 

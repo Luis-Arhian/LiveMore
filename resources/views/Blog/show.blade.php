@@ -27,9 +27,9 @@
 
     <div class="imagen">
         @if($post->images)
-            <img src="http://localhost/livemore/storage/app/{{$post->images->url}}" alt="Imagen del post">
+            <img loading="lazy" src="http://localhost/livemore/storage/app/{{$post->images->url}}" alt="Imagen del post">
         @else
-            <img src="http://localhost/livemore/storage/app/posts_images/default_image.jpg" alt="Imagen del post">
+            <img loading="lazy" src="http://localhost/livemore/storage/app/posts_images/default_image.jpg" alt="Imagen del post">
         @endif
 
         <span> </span>
@@ -46,12 +46,17 @@
         <div class="posts">
             @foreach ($post_similares as $relacionado)
                 <a href="">
-                    @if($relacionado->images)
-                        <img src="http://localhost/livemore/storage/app/public/{{$relacionado->images->url}}" alt="">
-
-                    @else
-                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Error al cargar la imágen">
-                    @endif
+                    <figure>
+                        @if($relacionado->images)
+                            <img loading="lazy" src="http://localhost/livemore/storage/app/{{$relacionado->images->url}}" alt="">
+                        @else
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Error al cargar la imágen">
+                        @endif
+                        <div class="info">
+                            <h1> {{$relacionado->title}}</h1>
+                            <p> {{$relacionado->brief}} </p>
+                        </div>
+                    </figure>
 
                     <h2> {{$relacionado->title}}</h2>
                 </a>

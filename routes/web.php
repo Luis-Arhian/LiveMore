@@ -1,5 +1,8 @@
 <?php
 
+
+
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,15 +23,10 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('master', function(){
-    return view('layouts.maestro');
-});
-
-
 // RUTAS BLOG
 Route::prefix('blog')->group(function () {
     //Route::resource('posts{post}', [PostsController::class, 'show'])->name('mostrar');
-    Route::get('principal', [PostsController::class, 'index']);
+    Route::get('principal', [PostsController::class, 'index'])->name('principal');
     Route::get('posts/{post}', [PostsController::class, 'show'])->name('mostrarPost');
 
 
@@ -37,7 +35,6 @@ Route::prefix('blog')->group(function () {
 });
 
 Route::resource('comments', CommentsController::class);
-
 
 // LOGIN
 Auth::routes();
