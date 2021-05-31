@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Metrophobic&family=Montserrat&display=swap");
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
+/* Colores */
 *,
 *:before,
 *:after {
@@ -35,7 +37,7 @@ body {
 .container .loginContainer {
   width: 55%;
   height: 100%;
-  background-color: #fff;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,34 +134,73 @@ body {
   font-size: 1rem;
 }
 
+.container .loginContainer .card form .recordar label .texto {
+  font-size: 1.2rem;
+}
+
 .container .loginContainer .card form button {
   height: 3rem;
   width: 8rem;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 5px;
   margin: 2rem;
+  background-color: #44e70e;
+  color: #433520;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.container .loginContainer .card form button:hover {
+  background-color: #433520;
+  color: #d3d3d3;
 }
 
 .container .loginContainer .card form a {
   font-size: 1rem;
   text-decoration: none;
   color: #363636;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.container .loginContainer .card form a:hover {
+  color: #44e70e;
 }
 
 .container .loginContainer .card .registrate {
   padding-top: 2rem;
   font-size: 1.2rem;
-  color: #363636;
 }
 
 .container .loginContainer .card .registrate a {
   cursor: pointer;
+  color: #433520;
   font-weight: bold;
   text-decoration: none;
+  -webkit-transition: color 0.2s ease, -webkit-transform 0.2s ease;
+  transition: color 0.2s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.container .loginContainer .card .registrate a:hover {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+  color: #44e70e;
+  cursor: pointer;
 }
 
 .container .error {
   color: red;
+}
+
+@media screen and (max-width: 770px) {
+  .container .imageContainer {
+    display: none;
+  }
+  .container .loginContainer {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=login.css.map */

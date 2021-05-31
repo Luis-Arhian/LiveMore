@@ -12,14 +12,14 @@ class Category extends Model
     use HasFactory;
 
     // Asignamos los parametros que podremos insertar en el modelo.
-    protected $fillable = ['name', 'slug'];
+    protected $fillable = ['title', 'slug'];
 
     public function posts(){
         return $this->hasMany(Post::class);
     }
 
     public function images(){
-        return $this->hasOne(Image::class, 'model');
+        return $this->morphOne(Image::class, 'model');
     }
 
     // Indicamos a Laravel que queremos que muestre el slug en lugar del id en la URL.

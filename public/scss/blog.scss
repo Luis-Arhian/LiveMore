@@ -39,7 +39,7 @@ body{
     &::-webkit-scrollbar-track {
         background-color: rgba(0,0,0,.1);
         border-radius: 5px;
-    }  
+    }
 }
 
 .posts{
@@ -406,10 +406,27 @@ body{
     }
 }
 
-
-
 @media screen and (max-width: 600px){
     .posts{
+        .post_principal{
+            .tituloPost{
+                margin-bottom: 3rem;
+            }
+        }
+        .postSecundario{
+            width: 90%;
+
+            .contenido{
+                h1{
+                    font-size: 0.8rem;
+                }
+
+                h2{
+                    display: none;
+                }
+            }
+        }
+
         .posts_categoria{
             display: grid;
             grid-template-columns: repeat(1, 1fr);
@@ -423,11 +440,6 @@ body{
             .tituloPost{
                 width:80%;
             }
-        }
-
-        .postSecundario{
-            width: 80%;
-            overflow: hidden;
         }
     }
 }

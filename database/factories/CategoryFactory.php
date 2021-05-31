@@ -22,10 +22,10 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->unique()->word(20);
+        $title = $this->faker->unique()->word(20);
         return [
-            'name' => $name,
-            'slug' => Str::Slug($name)
+            'title' => $title,
+            'slug' => Str::Slug($title)
         ];
     }
 }

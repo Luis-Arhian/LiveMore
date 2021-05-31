@@ -281,7 +281,7 @@ html {
 }
 
 .articulo .comentarios .enviarComentario {
-  margin: 1.2rem;
+  margin: 1.2rem 0 1.2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,6 +319,7 @@ html {
   color: #FDE8CD;
   resize: none;
   padding: 1.6rem;
+  width: 80%;
   height: 10%;
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
@@ -420,6 +421,12 @@ html {
     width: 95%;
     height: 15rem;
     left: 5%;
+  }
+  .articulo .title h1 {
+    font-size: 1.5rem;
+  }
+  .articulo .title .autor {
+    margin: 1rem;
   }
 }
 /*# sourceMappingURL=articulos.css.map */

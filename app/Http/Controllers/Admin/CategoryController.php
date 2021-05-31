@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -40,11 +41,20 @@ class CategoryController extends Controller
     {
         // Validamos los valores a introducir y al crear la categoria redirigimos a la vista editar para que el admin pueda introducir datos relevantes.
         $request->validate([
-            'name' => 'required',
+            'title' => 'required',
             'slug' => 'required|unique:categories'
-        ]);
+            ]);
 
         $categoria = Category::create($request->all());
+
+        // Obtener imagenes subidas por el admin.
+        if($request->file('file')){
+            $url = Storage::put('/public/posts_images', $request->file('file'));
+
+            $categoria->images()->create([
+                'url' => $url
+            ]);
+        }
 
         return redirect()->route('admin.categories.edit', $categoria)
             ->with('info', 'Se ha creado la categoria correctamente.');
@@ -83,11 +93,27 @@ class CategoryController extends Controller
     {
         // Validamos los valores a introducir y al crear la categoria redirigimos a la vista editar para que el admin pueda introducir datos relevantes.
         $request->validate([
-            'name' => 'required',
+            'title' => 'required',
             'slug' => "required|unique:categories,slug,$category->id"
         ]);
 
         $category->update(($request->all()));
+
+        if ($request->file('file')){
+            $url = Storage::put('categories', $request->file('file'));
+
+            if($category->images){
+                Storage::delete($category->images->url);
+
+                $category->images->update([
+                    'url' => $url
+                ]);
+            } else{
+                $category->images()->create([
+                    'url' => $url
+                ]);
+            }
+        }
 
         return redirect()->route('admin.categories.edit', $category)
         ->with('info', 'Se ha actualizado la categoria correctamente.');
@@ -105,5 +131,11 @@ class CategoryController extends Controller
 
         return redirect()->route('admin.categories.index')
             ->with('info', 'Se ha eliminado la categoria correctamente.');
+    }
+
+    // Indicamos a Laravel que queremos que muestre el slug en lugar del id en la URL.
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 }

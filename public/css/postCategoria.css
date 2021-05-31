@@ -184,6 +184,14 @@ body {
   text-align: center;
   font-size: 0.8rem;
   margin: auto;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .categoria .grid .post img {
@@ -191,6 +199,12 @@ body {
   height: 50%;
   margin-bottom: 1rem;
   border-radius: 5px;
+}
+
+.categoria .grid .post img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 1;
 }
 
 @media screen and (max-width: 850px) {

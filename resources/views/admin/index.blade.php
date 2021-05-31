@@ -8,7 +8,7 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>Bienvenido al panel de administración de LiveMore.</p>
 @stop
 
 @section('css')

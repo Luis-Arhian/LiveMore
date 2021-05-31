@@ -494,6 +494,18 @@ body::-webkit-scrollbar-track {
 }
 
 @media screen and (max-width: 600px) {
+  .posts .post_principal .tituloPost {
+    margin-bottom: 3rem;
+  }
+  .posts .postSecundario {
+    width: 90%;
+  }
+  .posts .postSecundario .contenido h1 {
+    font-size: 0.8rem;
+  }
+  .posts .postSecundario .contenido h2 {
+    display: none;
+  }
   .posts .posts_categoria {
     display: -ms-grid;
     display: grid;
@@ -505,10 +517,6 @@ body::-webkit-scrollbar-track {
 @media screen and (max-width: 400px) {
   .posts .post_principal .tituloPost {
     width: 80%;
-  }
-  .posts .postSecundario {
-    width: 80%;
-    overflow: hidden;
   }
 }
 /*# sourceMappingURL=blog.css.map */

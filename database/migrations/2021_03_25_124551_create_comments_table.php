@@ -17,7 +17,7 @@ class CreateCommentsTable extends Migration
             $table->bigIncrements('id'); // ID del comentario.
             $table->string('content'); // Contenido del comentario.
             $table->bigInteger('post_id')->unsigned(); // ID del modelo del post al que pertenece.
-            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
             $table->bigInteger('user_id')->unsigned(); // ID del modelo del usuario que ha creado el comentario.
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps(); // Fecha de creación del comentario.

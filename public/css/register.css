@@ -139,4 +139,13 @@ body {
 .container .content .card .iniciaSesion span {
   color: blue;
 }
+
+@media screen and (max-width: 770px) {
+  .container .image {
+    display: none;
+  }
+  .container .content {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=register.css.map */

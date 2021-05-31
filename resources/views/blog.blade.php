@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" href="{{asset('css/blog.css')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/logos/favicon-16x16.png')}}">
+
     <script src="{{asset('ts/blog.js')}}"></script>
     <title> Página principal </title>
 </head>
@@ -22,7 +24,7 @@
                         <a href="{{route('mostrarPost', $post)}}" class="tituloPost">
                             <div class="categoria">
                                 <span> </span>
-                                <p> {{$post->categories->name}}</p>
+                                <p> {{$post->categories->title}}</p>
                                 <span> </span>
                             </div>
 
@@ -51,8 +53,8 @@
                             <div class="close">
                                 <svg loading="lazy" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
                             </div>
-                            <a href="#"> Principal</a>
-                            <a href="#"> Categorias </a>
+                            <a href=""> Principal</a>
+                            <a href="{{route('todasLasCategorias')}}"> Categorias </a>
                             <a href="#"> Contacto </a>
 
                             @if(auth()->user())
@@ -73,9 +75,9 @@
             @if ($loop->index == 1)
                 <a href="{{route('mostrarPost', $post)}}"class="postSecundario">
                     <div class="contenido">
-                        <h1> {{$post->title}}</h1>
+                        <h1> {!!$post->title!!}</h1>
                         <h2> {!!$post->brief!!}</h2>
-                        <h3> Articulo de {{$post->user->name}} {{$post->user->surname}}</h3>
+                        <h3> Articulo de {!!$post->user->name!!} {!!$post->user->surname!!}</h3>
                     </div>
 
                     <div class="imagen" loading="lazy" style='background-image: url(
@@ -94,7 +96,7 @@
             @if($categoria->posts->count())
                 <div class="categoria">
                     <a href="{{route('filtrarCategoria', $categoria)}}">
-                        <h1> {{$categoria->name}}</h1>
+                        <h1> {{$categoria->title}}</h1>
                     </a>
                     <span> </span>
                 </div>

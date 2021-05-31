@@ -32,7 +32,7 @@
                      @foreach ($categories as $category)
                          <tr>
                              <td> {{$category -> id}} </td>
-                             <td> {{$category -> name}} </td>
+                             <td> {{$category -> title}} </td>
                              <td width="16px">
                                  <a href="{{route('admin.categories.edit', $category)}}" class="btn btn-primary btn-sm"> Editar </a></td>
                              <td width="16px">

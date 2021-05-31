@@ -47,7 +47,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route'=>'admin.posts.store', 'autocomplete'=>'off', 'files' => 'true'])!!}
+            {!! Form::open(['route'=> ['admin.posts.store'], 'autocomplete'=>'off', 'files' => 'true'])!!}
 
             {{-- Campo oculto para mandar el id del usuario autentificado. --}}
             {!! Form::hidden('user_id', auth()->user()->id) !!}

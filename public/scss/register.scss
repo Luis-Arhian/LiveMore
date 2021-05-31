@@ -110,5 +110,16 @@ body {
             }
         }
     }
+}
 
+@media screen and (max-width: 770px) {
+    .container {
+        .image {
+            display: none;
+        }
+
+        .content {
+            width: 100%;
+        }
+    }
 }
