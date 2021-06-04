@@ -225,11 +225,6 @@ return [
 
     'menu' => [
         [
-            'text' => 'Buscar',
-            'search' => true,
-            'topnav' => true,
-        ],
-        [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
@@ -245,7 +240,7 @@ return [
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-buffer',
         ],
-        ],
+
         ['header' => 'Opciones de posts'],
         [
             'text'       => 'Todos los posts',

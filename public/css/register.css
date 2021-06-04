@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Metrophobic&family=Montserrat&display=swap");
+/* Colores */
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -126,26 +127,59 @@ body {
 
 .container .content .card form button[type="submit"] {
   width: 10rem;
-  height: 3rem;
-  font-size: 1.8rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
   border-radius: 5px;
   border: none;
-  background-color: #383838;
+  background-color: #44e70e;
   color: #fff;
-  margin-bottom: .5rem;
-  margin-top: 0.5rem;
+  padding: 1.2rem;
+  margin: 1.2rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.container .content .card .iniciaSesion span {
-  color: blue;
+.container .content .card form button[type="submit"]:hover {
+  background-color: #433520;
+  color: #d3d3d3;
+}
+
+.container .content .card .iniciaSesion {
+  font-size: 0.8rem;
+}
+
+.container .content .card .iniciaSesion a {
+  color: #433520;
+  font-weight: bold;
+  -webkit-transition: color 0.2s ease, -webkit-transform 0.2s ease;
+  transition: color 0.2s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
+  text-decoration: none;
+}
+
+.container .content .card .iniciaSesion a:hover {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+  color: #44e70e;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 770px) {
+  .container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .container .image {
     display: none;
   }
   .container .content {
     width: 100%;
+  }
+  .container .content svg {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=register.css.map */

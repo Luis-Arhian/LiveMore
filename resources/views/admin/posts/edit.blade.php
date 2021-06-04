@@ -47,9 +47,9 @@
 
 @section('content')
 <div class="card">
-        <h1> {{$posts}} </h1>
+        <h1> {{$post}} </h1>
         <div class="card-body">
-            {!! Form::model($posts, ['route'=> ['admin.posts.update', $posts], 'autocomplete'=>'off', 'files' => 'true', 'method' => 'PUT'])!!}
+            {!!Form::model($post, [ 'route'=> ['admin.posts.update', $post], 'autocomplete'=>'off', 'files' => 'true', 'method' => 'PUT'])!!}
 
             @include('admin.posts.partials.form')
 

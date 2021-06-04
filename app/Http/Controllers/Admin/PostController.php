@@ -56,11 +56,9 @@ class PostController extends Controller
             ]);
         }
 
-        return $post;
-        /*
         return redirect()->route('admin.posts.edit', $post)
         ->with('info', 'Se ha creado el post correctamente.');
-        */
+
     }
 
     /**
@@ -84,8 +82,7 @@ class PostController extends Controller
     {
         $categorias = Category::pluck('title', 'id');
 
-        return $post;
-        //return view('admin.posts.edit', compact('posts', 'categorias'));
+        return view('admin.posts.edit', compact('post', 'categorias'));
     }
 
     /**
@@ -115,7 +112,7 @@ class PostController extends Controller
             }
         }
 
-        return redirect()->route('admin.posts.edit', $post)
+        return redirect()->route('admin.posts.edit', compact('post'))
         ->with('info', 'El post se ha actualizado correctamente.');
     }
 

@@ -57,13 +57,12 @@ html {
         font-weight: 600;
         display: flex;
         justify-content: center;
-        align-items: center;
         width: 100%;
 
 
         p{
-            width: 80%;
-            font-size: 1rem;
+            width: 100%;
+            font-size: 1.1 rem;
             text-align: center;
         }
     }
@@ -95,7 +94,8 @@ html {
         font-family: 'Metrophobic', sans-serif;
         width: 60%;
         margin: 2rem auto 2rem auto;
-        font-size: 1rem;
+        font-size: 1.4rem;
+        line-height: calc(1.4rem * 1.618);
         text-align: justify;
     }
 
@@ -348,7 +348,7 @@ html {
             left: 5%;
 
             h1{
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
             .autor{

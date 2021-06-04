@@ -1,5 +1,13 @@
-$grandient: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Metrophobic&family=Montserrat&display=swap');
+
+/* Colores */
+$verde: #44e70e;
+$gris: #433520;
+$light_grey: #d3d3d3;
+$azul: #025955;
+$azulClaro: #00917C;
+$crema: #FDE8CD;
+$black: #363636;
 
 html {
     -webkit-box-sizing: border-box;
@@ -91,21 +99,38 @@ body {
 
                 button[type="submit"]{
                     width: 10rem;
-                    height: 3rem;
-                    font-size: 1.8rem;
+                    height: 3.5rem;
+                    font-size: 1.2rem;
                     border-radius: 5px;
                     border: none;
-                    background-color: #383838;
+                    background-color: $verde;
                     color: #fff;
-                    margin-bottom: .5rem;
-                    margin-top: 0.5rem
+                    padding: 1.2rem;
+                    margin: 1.2rem;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        background-color: $gris;
+                        color: $light_grey;
+                    }
                 }
 
             }
 
             .iniciaSesion{
-                span{
-                    color: blue
+                font-size: 0.8rem;
+
+                a{
+                    color: $gris;
+                    font-weight: bold;
+                    transition: transform 0.2s ease, color 0.2s ease;
+                    text-decoration: none;
+
+                    &:hover {
+                        transform: translateX(4px);
+                        color: $verde;
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -114,12 +139,18 @@ body {
 
 @media screen and (max-width: 770px) {
     .container {
+        width: 100%;
+        display: flex;
+
         .image {
             display: none;
         }
 
         .content {
             width: 100%;
+            svg{
+                width: 30%;
+            }
         }
     }
 }

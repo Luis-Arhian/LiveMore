@@ -330,15 +330,13 @@ body::-webkit-scrollbar-track {
   width: 15rem;
   height: 15rem;
   border-radius: 5px;
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .posts .posts_categoria .post img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .posts .posts_categoria .post .title {

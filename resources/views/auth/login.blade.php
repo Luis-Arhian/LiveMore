@@ -81,6 +81,7 @@
                     </div>
 
                     <div class="registrate"> ¿Todavia no has comenzado?
+                        <br>
                         <a href="{{Route('register')}}"> Registrate </a>
                     </div>
                 </div>

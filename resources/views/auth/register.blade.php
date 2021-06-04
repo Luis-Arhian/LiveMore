@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title> Crear una cuenta </title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -42,7 +42,7 @@
             </svg>
 
             <div class="card">
-                <div class="title">{{ __('Registrate') }}</div>
+                <div class="title">{{ __('Crea una cuenta') }}</div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -95,7 +95,7 @@
                     </form>
 
                     <div class="iniciaSesion"> Si ya tienes cuenta,
-                        <span class="link"> inicia sesión </span>
+                        <a href="{{route('login')}} class="link"> inicia sesión </a>
                     </div>
                 </div>
             </div>

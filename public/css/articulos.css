@@ -72,15 +72,12 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
 }
 
 .articulo .brief p {
-  width: 80%;
-  font-size: 1rem;
+  width: 100%;
+  font-size: 1.1 rem;
   text-align: center;
 }
 
@@ -119,7 +116,8 @@ html {
   font-family: 'Metrophobic', sans-serif;
   width: 60%;
   margin: 2rem auto 2rem auto;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  line-height: calc(1.4rem * 1.618);
   text-align: justify;
 }
 
@@ -423,7 +421,7 @@ html {
     left: 5%;
   }
   .articulo .title h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .articulo .title .autor {
     margin: 1rem;

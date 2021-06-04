@@ -342,5 +342,8 @@ body .principal .registrate button:hover::before {
     bottom: 0.8rem;
     left: 2.5rem;
   }
+  body .principal .registrate {
+    left: 10%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

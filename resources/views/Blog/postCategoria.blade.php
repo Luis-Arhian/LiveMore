@@ -14,9 +14,9 @@
                     @if ($loop->index < 2)
                             <div class="principales">
                                 <div class="content">
-                                    <h1> {{$post->title}} </h1>
-                                    <h2> {{$post->brief}}</h2>
-                                    <h3> {{$post->user->name}} {{$post->user->surname}} </h3>
+                                    <h1> {!!$post->title!!} </h1>
+                                    <h2> {!!$post->brief!!}</h2>
+                                    <h3> {!!$post->user->name!!} {!!$post->user->surname!!} </h3>
                                 </div>
                                 @if($post->images)
                                     <img src="http://localhost/livemore/storage/app/{{$post->images->url}}" alt="">
@@ -36,7 +36,7 @@
                                         <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
                                     @endif
 
-                                    <h3> {{$post2->title}}</h3>
+                                    <h3> {!!$post2->title!!}</h3>
                                 </div>
                                 @endif
                             @endforeach
