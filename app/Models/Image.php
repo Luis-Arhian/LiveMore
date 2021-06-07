@@ -11,10 +11,7 @@ class Image extends Model
     use HasFactory;
 
     protected $fillable = ['url'];
-
-    public function getUrlPathAttribute(){
-        return Storage::url($this->path);
-    }
+    
     public function model(){
         return $this->morphTo();
     }
