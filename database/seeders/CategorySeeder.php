@@ -25,10 +25,14 @@ class CategorySeeder extends Seeder
             $posts = Post::factory(6)->create([
                 'category_id' => $categoria -> id
             ]);
+
+
+            // Por cada post se crea 1 imagen.
+            foreach ($posts as $post){
                 Comment::factory(5)->create([
                     'post_id' => $post->id
                 ]);
             }
         }
     }
-
+}
