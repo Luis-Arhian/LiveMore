@@ -21,18 +21,10 @@ class CategorySeeder extends Seeder
         $categories = Category::factory(5)->create();
 
         foreach ($categories as $categoria){
-            Image::factory(1)->create([
-                // Le indicamos el id del post y la clase.
-                'model_id' => $categoria->id,
-                'model_type' => Category::class
-            ]);
-
             // Creamos 15 post de prueba.
             $posts = Post::factory(6)->create([
                 'category_id' => $categoria -> id
             ]);
-
-
                 Comment::factory(5)->create([
                     'post_id' => $post->id
                 ]);
