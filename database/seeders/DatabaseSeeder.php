@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Storage::deleteDirectory('app/public/posts_images');
         // Creamos el directorio donde se guardarán las imagenes.
         Storage::makeDirectory('app/public/posts_images');
 
