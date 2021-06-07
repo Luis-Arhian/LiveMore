@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // Creamos el directorio donde se guardarán las imagenes.
-        Storage::makeDirectory('/public/posts_images');
+        Storage::makeDirectory('app/public/posts_images');
 
         // Creamos los datos de prueba mediante Factory.
         \App\Models\User::factory(5)->create();

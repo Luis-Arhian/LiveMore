@@ -11,9 +11,8 @@
 
             <a href="{{route('principal')}}"> Principal </a>
             <a href="{{route('todasLasCategorias')}}"> Categorias </a>
-            <a href=""> Contacto </a>
             @if(auth()->user())
-                <a href="{{route('login')}}"> {{auth()->user()->name}} </a>
+                <a href="{{route('admin')}}"> {{auth()->user()->name}} </a>
             @else
                 <a href="{{route('login')}}"> Iniciar sesión </a>
             @endif

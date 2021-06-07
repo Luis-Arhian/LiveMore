@@ -55,7 +55,6 @@
                             </div>
                             <a href=""> Principal</a>
                             <a href="{{route('todasLasCategorias')}}"> Categorias </a>
-                            <a href="#"> Contacto </a>
 
                             @if(auth()->user())
                                 <a href="{{route('login')}}"> {{auth()->user()->name}} </a>

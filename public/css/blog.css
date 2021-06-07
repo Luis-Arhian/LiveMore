@@ -216,6 +216,13 @@ body::-webkit-scrollbar-track {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.posts .postSecundario:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .posts .postSecundario .contenido {
@@ -332,6 +339,8 @@ body::-webkit-scrollbar-track {
   border-radius: 5px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .posts .posts_categoria .post img:hover {
@@ -339,10 +348,16 @@ body::-webkit-scrollbar-track {
           transform: scale(1.2);
 }
 
+.posts .posts_categoria .post img:hover + .title {
+  margin-top: 1.6rem;
+}
+
 .posts .posts_categoria .post .title {
   font-size: 1.2rem;
   text-align: center;
   margin-top: 0.5rem;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .posts .posts_categoria .post .title a {
