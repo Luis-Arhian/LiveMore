@@ -21,12 +21,6 @@ class PostSeeder extends Seeder
 
         // Por cada post se crean 1 imagen.
         foreach ($posts as $post){
-            Image::factory(1)->create([
-                // Le indicamos el id del post y la clase.
-                'model_id' => $post->id,
-                'model_type' => Post::class
-            ]);
-
             // Creamos 5 comentarios de prueba por cada post.
             Comment::factory(5)->create([
                 'post_id' => $post->id

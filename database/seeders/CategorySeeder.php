@@ -33,14 +33,6 @@ class CategorySeeder extends Seeder
             ]);
 
 
-            // Por cada post se crea 1 imagen.
-            foreach ($posts as $post){
-                Image::factory(1)->create([
-                    // Le indicamos el id del post y la clase.
-                    'model_id' => $post->id,
-                    'model_type' => Post::class
-                ]);
-
                 Comment::factory(5)->create([
                     'post_id' => $post->id
                 ]);
