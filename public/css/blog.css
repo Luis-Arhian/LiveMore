@@ -157,8 +157,6 @@ body::-webkit-scrollbar-track {
 }
 
 .posts .post_principal .nav .logo {
-  width: 20%;
-  height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
