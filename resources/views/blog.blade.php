@@ -34,7 +34,7 @@
                     {{-- Menu de navegación --}}
                     <div class="nav">
                         <div class="logo">
-                            <img src="{{asset('assets/logos/logonegro.png')}}" alt="Logo Livemore">
+                            <img src={{asset('assets/logos/logo.png')}} alt="logo LiveMore">
                         </div>
 
                         <div class="enlaces">
