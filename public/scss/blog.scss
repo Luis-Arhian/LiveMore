@@ -125,15 +125,8 @@ body{
             position: sticky;
             top: 0;
 
-            .logo{
-                display: flex;
-                align-items: center;
-                overflow: hidden;
-
-                img{
-                    width: 100px;
-                    height: 30px;
-                }
+            img{
+                width: 9rem
             }
 
             .enlaces{
