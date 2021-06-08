@@ -32,6 +32,11 @@ footer .contenido .logo {
       justify-self: center;
 }
 
+footer .contenido .logo img {
+  width: 12rem;
+  margin: 0.5rem;
+}
+
 footer .contenido .copyright {
   -ms-grid-row: 1;
   -ms-grid-column: 2;

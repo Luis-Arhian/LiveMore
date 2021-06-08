@@ -1,7 +1,7 @@
 <footer>
     <div class="contenido">
         <div class="logo">
-            <img src="{{asset('assets/logos/logoNegro.svg')}}" alt="Logo LiveMore">
+            <img src="{{asset('assets/logos/logoNegro.png')}}" alt="Logo LiveMore">
         </div>
 
         <div class="copyright">

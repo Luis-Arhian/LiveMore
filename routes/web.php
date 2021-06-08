@@ -4,6 +4,7 @@
 
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ContactoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,8 @@ Route::prefix('blog')->group(function () {
 
     Route::get('categorias', [PostsController::class, 'everyCategory'])->name('todasLasCategorias');
     Route::get('categorias/{categoria}', [PostsController::class, 'showCategory'])->name('filtrarCategoria');
+
+    Route::get('contacto', [ContactoController::class, 'show'])->name('contacto');
 });
 
 Route::resource('comments', CommentsController::class);

@@ -29,6 +29,9 @@ footer{
             grid-area: logo;
             width: 50%;
             justify-self: center;
+            img{
+                width: 12rem;
+                margin: 0.5rem;            }
         }
 
         .copyright{

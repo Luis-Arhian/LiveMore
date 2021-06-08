@@ -114,6 +114,6 @@ class PostsController extends Controller
 
     public function everyCategory(Category $categoria){
         $categorias = Category::all();
-        return view('everyCategory', compact('categorias'));
+        return view('blog.categorias', compact('categorias'));
     }
 }

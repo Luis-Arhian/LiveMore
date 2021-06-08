@@ -159,6 +159,16 @@ body::-webkit-scrollbar-track {
 .posts .post_principal .nav .logo {
   width: 20%;
   height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.posts .post_principal .nav .logo img {
+  width: 9rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .posts .post_principal .nav .enlaces {
@@ -393,7 +403,7 @@ body::-webkit-scrollbar-track {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1225px) {
   .posts .post_principal .tituloPost {
     width: 25rem;
     font-size: 0.8rem;

@@ -34,19 +34,7 @@
                     {{-- Menu de navegación --}}
                     <div class="nav">
                         <div class="logo">
-                            <svg loading="lazy" width="100%" height="100%" viewBox="0 0 369 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                                <g transform="matrix(1,0,0,1,-224.859,-153.035)">
-                                    <g transform="matrix(2.59851,0,0,3.28732,-5.76409,-1175.56)">
-                                        <text x="91px" y="510px" style="font-family:'Rockstarswashes-Regular', 'Rockstar swashes';font-size:86.455px;fill:rgb(67,53,32);">d</text>
-                                    </g>
-                                    <g transform="matrix(1,0,0,1,129,5)">
-                                        <text x="120px" y="369px" style="font-family:'Rockstaralt.-Regular', 'Rockstar alt.';font-size:262.457px;fill:rgb(67,53,32);">L</text>
-                                    </g>
-                                    <g transform="matrix(1,0,0,1,-28,-15)">
-                                        <text x="416px" y="378px" style="font-family:'Rockstaralt.-Regular', 'Rockstar alt.';font-size:262.457px;fill:rgb(251,235,204);">M</text>
-                                    </g>
-                                </g>
-                            </svg>
+                            <img src="{{asset('assets/logos/logonegro.png')}}" alt="Logo Livemore">
                         </div>
 
                         <div class="enlaces">
@@ -55,6 +43,7 @@
                             </div>
                             <a href=""> Principal</a>
                             <a href="{{route('todasLasCategorias')}}"> Categorias </a>
+                            <a href="{{route('contacto')}}"> Contacto</a>
 
                             @if(auth()->user())
                                 <a href="{{route('login')}}"> {{auth()->user()->name}} </a>

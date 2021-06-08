@@ -1,7 +1,7 @@
 <nav class="navegador">
     <div class="navegador contenedor-navegador">
         <div class="logo">
-            <img id="logoNav" src="{{asset('assets/logos/icono.svg')}}" alt="Logo LiveMore">
+            <img id="logoNav" src="{{asset('assets/logos/icono.png')}}" alt="Logo LiveMore">
         </div>
 
         <div class="enlaces">
@@ -11,6 +11,7 @@
 
             <a href="{{route('principal')}}"> Principal </a>
             <a href="{{route('todasLasCategorias')}}"> Categorias </a>
+            <a href="{{route('contacto')}}"> Contacto </a>
             @if(auth()->user())
                 <a href="{{route('admin')}}"> {{auth()->user()->name}} </a>
             @else

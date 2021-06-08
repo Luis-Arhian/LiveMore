@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Metrophobic&family=Montserrat&display=swap");
+
+/* Colores */
+$verde: #3dd40b;
+$gris: #433520;
+$azul: #025955;
+$azulClaro: #01a088;
+$crema: #FDE8CD;
+$negro: #2b2b2b;
+
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72vh;
+    width: 100vw;
+
+    .formulario{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        font-size: 1.2rem;
+
+        h1{
+            margin-bottom: 7rem;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 20rem;
+
+            & > *{
+                margin: 1.5rem;
+                width: 80%;
+                height: 2rem;
+                border: none;
+                border-bottom: 1px solid $verde;
+            }
+
+            textarea{
+                overflow: hidden;
+                resize: none;
+            }
+            input[type="submit"]{
+                background-color: $verde;
+                color: $gris;
+            }
+        }
+    }
+}
