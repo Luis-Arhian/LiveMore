@@ -56,7 +56,7 @@ class PostController extends Controller
             ]);
         }
 
-        return redirect()->route('admin.posts.edit', $post)
+        return redirect()->route('admin.posts.index', $post)
         ->with('info', 'Se ha creado el post correctamente.');
 
     }
