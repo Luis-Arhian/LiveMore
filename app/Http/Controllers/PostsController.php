@@ -109,11 +109,11 @@ class PostsController extends Controller
                     ->latest('id')
                     ->get();
 
-        return view('blog.postCategoria', compact('categoria', 'postCategoria'));
+        return view('Blog.postCategoria', compact('categoria', 'postCategoria'));
     }
 
     public function everyCategory(Category $categoria){
         $categorias = Category::all();
-        return view('blog.categorias', compact('categorias'));
+        return view('Blog.categorias', compact('categorias'));
     }
 }
