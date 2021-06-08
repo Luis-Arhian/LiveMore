@@ -78,6 +78,10 @@ body .navegador .contenedor-navegador .logo {
           align-items: center;
 }
 
+body .navegador .contenedor-navegador .logo img {
+  width: 3rem;
+}
+
 body .navegador .contenedor-navegador .close {
   display: none;
 }
