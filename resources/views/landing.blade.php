@@ -14,7 +14,7 @@
         <nav class="navegacion">
             <div class="navegacion contenedor-navegacion">
             	<div class="logo">
-            	       <img src={{asset('assets/logos/logo.png')}} alt="logo LiveMore">
+            	    <img src={{asset('assets/logos/logo.png')}} alt="logo LiveMore">
             	</div>
             	<div class="enlaces">
                     <div class="close">
