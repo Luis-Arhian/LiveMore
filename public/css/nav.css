@@ -78,7 +78,7 @@ body .navegador .contenedor-navegador .logo {
           align-items: center;
 }
 
-body .navegador .contenedor-navegador .logo img {
+body .navegador .contenedor-navegador .logo #logoNav {
   width: 3rem;
 }
 
