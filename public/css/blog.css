@@ -162,13 +162,15 @@ body::-webkit-scrollbar-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.posts .post_principal .nav .logo img {
-  width: 9rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+}
+
+.posts .post_principal .nav .logo img {
+  width: 100px;
+  height: 30px;
 }
 
 .posts .post_principal .nav .enlaces {
