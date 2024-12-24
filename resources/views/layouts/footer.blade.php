@@ -5,8 +5,8 @@
         </div>
 
         <div class="copyright">
-            <p> Copyright(c) 2021 </p>
-            <span> LiveMore.com</span>
+            <p> Copyright(c) 2024 </p>
+            <span> Guita.com</span>
         </div>
 
         <div class="redes">

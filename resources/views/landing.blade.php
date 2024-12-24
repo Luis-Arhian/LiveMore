@@ -35,14 +35,14 @@
        </nav>
 
        <div class="eslogan">
-           <span class="light"> BE YOUR</span>
-           <span class="regular"> OWN </span>
-           <span class="medium"> CHANGE </span>
+           <span class="light"> EL CAMBIO</span>
+           <span class="regular"> ESTA  </span>
+           <span class="medium"> EN TI </span>
 
            <svg width="100%" height="100%" viewBox="0 0 657 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
             <g transform="matrix(1,0,0,1,-76.6758,-237.279)">
                 <g transform="matrix(1,0,0,1,-55,10)">
-                    <text x="127px" y="418px" style="font-family:'Rockstarswashes-Regular', 'Rockstar swashes';font-size:428.586px;">g</text>
+                    <text x="127px" y="418px" style="font-family:'Rockstarswashes-Regular', 'Rockstar swashes';font-size:428.586px;">GO?</text>
                 </g>
             </g>
           </svg>
